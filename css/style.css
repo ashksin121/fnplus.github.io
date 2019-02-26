@@ -485,6 +485,16 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   width: 100%;
   margin-left: -5em;
 }
+#colorlib-hero .hero-flex .text-inner h1 {
+  font-size: 58px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 768px) {
+  #colorlib-hero .hero-flex .text-inner h1 {
+    font-size: 24px;
+  }
+}
 #colorlib-hero .hero-flex .text-inner h2 {
   font-size: 58px;
   font-weight: 700;
@@ -972,6 +982,14 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   -o-box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 2px 49px -4px rgba(0, 0, 0, 0.21);
 }
+.article .desc h1 {
+  font-size: 24px;
+}
+.article .desc h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
 .article .desc h2 {
   font-size: 24px;
 }
