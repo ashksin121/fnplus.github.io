@@ -92,17 +92,11 @@
 		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
 		.icon-bar {
 		position: fixed;
-		top: 0;
-		right: 50%;
-		display: flex;
-		margin: 0;
-		padding: 0;
-		/* -webkit-transform: translateY(-50%);
+		top: 50%;
+		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
-		transform: translateY(-50%); */
-		-webkit-transform: translateX(50%);
-		-ms-transform: translateX(50%);
-		transform: translateX(50%);
+		transform: translateY(-50%);
+
 		z-index: 1000;
 		}
 
@@ -123,32 +117,39 @@
 
 		.facebook {
 		background: #3B5998;
-		color: white;
 		}
 
 		.instagram{
 			background: #C1558B;
-			color: white;
 		}
 
 		.twitter {
 		background: #55ACEE;
-		color: white;
 		}
 
 		.github {
 		background: #000000;
-		color: white;
 		}
 
 		.medium {
 		background: #029843;
-		color: white;
 		}
 
 		.linkedin {
 		background: #007bb5;
-		color: white;
+		}
+
+		@media screen and (max-width: 768px){
+			.icon-bar{
+				right: 50%;
+				top: 0;
+				display: flex;
+				margin: 0;
+				padding: 0;
+				-webkit-transform: translateX(50%);
+				-ms-transform: translateX(50%);
+				transform: translateX(50%);
+			}
 		}
 
 	</style>
