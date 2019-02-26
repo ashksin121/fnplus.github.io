@@ -9,7 +9,7 @@
 	<meta name="description" content="We connect geeks and new perspectives to promote diversity, innovation & passion." />
 	<meta name="keywords" content="fn+, geeks, fnplus, community, geeksgarage, students, developers, coders, emapthy, startup" />
 	<meta name="author" content="Fnplus Tech Community" />
-	
+
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png">
@@ -20,9 +20,9 @@
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
-	
+
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-   
+
 	<script>
   		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -32,7 +32,7 @@
   		ga('create', 'UA-75310074-5', 'auto');
   		ga('send', 'pageview');
 	</script>
-	  
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -65,7 +65,7 @@
 							<li><a href="work.html">What we do</a></li>
 							<li><a href="https://medium.com/fnplus">Blog</a></li>
 							<li><a href="meetup.html">Explore Local Jams</a></li>
-							<li><a href="volunteer.html">Organise a Jam</a></li>    
+							<li><a href="volunteer.html">Organise a Jam</a></li>
               				<li><a href="about.html">About</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
@@ -80,9 +80,9 @@
 
 	<!-- The social media icon bar -->
 	<div class="icon-bar">
-		<a href="https://www.facebook.com/fnplusofficial/" class="facebook"><i class="fa fa-facebook"></i></a> 
+		<a href="https://www.facebook.com/fnplusofficial/" class="facebook"><i class="fa fa-facebook"></i></a>
 		<a href="https://twitter.com/fnplusofficial" class="twitter"><i class="fa fa-twitter"></i></a>
-		<a href="https://instagram.com/fnplusofficial" class="instagram"><i class="fa fa-google"></i></a>
+		<a href="https://instagram.com/fnplusofficial" class="instagram"><i class="fa fa-instagram"></i></a>
 		<a href="https://github.com/fnplus" class="github"><i class="fa fa-github"></i>
 		<a href="https://medium.com/fnplus" class="medium"><i class="fa fa-medium"></i></a>
 		<a href="https://www.linkedin.com/company/fnplus/" class="linkedin"><i class="fa fa-linkedin"></i></a>
@@ -97,6 +97,7 @@
 		-webkit-transform: translateY(-50%);
 		-ms-transform: translateY(-50%);
 		transform: translateY(-50%);
+		z-index: 1000;
 		}
 
 		/* Style the icon bar links */
@@ -117,6 +118,11 @@
 		.facebook {
 		background: #3B5998;
 		color: white;
+		}
+
+		.instagram{
+			background: #C1558B;
+			color: white;
 		}
 
 		.twitter {
@@ -230,7 +236,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<!-- ADD CONFIG	-->
 	<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 	<script>
@@ -249,7 +255,7 @@
 	<script>
 		const messaging = firebase.messaging();
 		messaging.usePublicVapidKey('BMXXuXuiGgtBPLsOlj9O8Xeg-D53bZ4xc38saTUWGCQfFnBxhEyhwU3SWxAYxp9KB_Ck8MHMeBPvb5HE9fVfuqg');
-		  
+
 		// [START refresh_token]
 		// Callback fired if Instance ID token is updated.
 		messaging.onTokenRefresh(function() {
@@ -260,16 +266,16 @@
 			setTokenSentToServer(false);
 			// Send Instance ID token to app server.
 			console.log('Token', refreshedToken);
-				
+
 			}).catch(function(err) {
 			console.log('Unable to retrieve refreshed token ', err);
 			showToken('Unable to retrieve refreshed token ', err);
 			});
 			});
 		// [END refresh_token]
-			
+
 		requestPermission();
-			
+
 		// [START get_token]
 		// Get Instance ID token. Initially this makes a network call, once retrieved
 		// subsequent calls to getToken will return from cache.
@@ -287,7 +293,7 @@
 			setTokenSentToServer(false);
 		});
 		// [END get_token]
-		  
+
 		// [START receive_message]
 		// Handle incoming messages. Called when:
 		// - a message is received while the app has focus
@@ -295,18 +301,18 @@
 		//   `messaging.setBackgroundMessageHandler` handler.
 		messaging.onMessage(function(payload) {
 			console.log('Message received. ', payload);
-			
+
 		});
 		// [END receive_message]
-		
+
 		function isTokenSentToServer() {
 			return window.localStorage.getItem('sentToServer') === '1';
 		}
-		
+
 		function setTokenSentToServer(sent) {
 			window.localStorage.setItem('sentToServer', sent ? '1' : '0');
 		}
-		
+
 		function requestPermission() {
 			console.log('Requesting permission...');
 			// [START request_permission]
@@ -314,13 +320,13 @@
 			console.log('Notification permission granted.');
 			// TODO: Retrieve an Instance ID token for use with FCM. Check token from here.
 			// console.log('Token :', messaging.getToken());
-			
+
 			}).catch(function(err) {
 			console.log('Unable to get permission to notify.', err);
 			});
 			// [END request_permission]
 		}
-		
+
 		function deleteToken() {
 			// Delete Instance ID token.
 			// [START delete_token]
@@ -337,7 +343,7 @@
 			console.log('Error retrieving Instance ID token. ', err);
 			showToken('Error retrieving Instance ID token. ', err);
 			});
-		  
+
 		}
 
 	</script>
