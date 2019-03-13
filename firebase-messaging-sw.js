@@ -39,7 +39,7 @@ let filesToCache = [
 	"/",
 	"/index.html",
 	"js/main.js",
-	"css/main.css"
+	"css/style.css"
 ];
 
 self.addEventListener("install", function(event) {
