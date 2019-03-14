@@ -254,6 +254,7 @@ section#reviews .review-filtering {
 }
 section#reviews .review-filtering .review .review-person {
   width: 100%;
+  margin: 0 auto;
 }
 section#reviews .review-filtering .review .review-person img {
   width: 110px;
@@ -262,7 +263,7 @@ section#reviews .review-filtering .review .review-person img {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
-  margin: 10px auto;
+  margin: 0 auto;
 }
 section#reviews .review-filtering .review .review-comment {
   width: 100%;
