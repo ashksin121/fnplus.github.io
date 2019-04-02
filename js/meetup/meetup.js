@@ -290,7 +290,7 @@ var load_widget = function($, ctx) {
           );
           alert(data.status + ": " + data.details);
         } else {
-          // console.log(data.results);
+          console.log(data.results);
           if (data.results.length == 0) {
             $(".mupast-widget", ctx).append(
               '<div class="mupast-nojams">No Jams</div>'
@@ -303,30 +303,88 @@ var load_widget = function($, ctx) {
             );
 
             $(".mupast-widget", ctx).append(
-              '<div class="mupast-meetups"></div>'
+              '<div class="mupast-meetups">\
+          <section id="archive" class="archive reset-this"> \
+            <div class= "previous-editions" > \
+            <div class="events"> \
+              <div class="years"> \
+              </div> \
+              <div class="months"> \
+              </div> \
+              <div class="content"> \
+              </div> \
+              </div> \
+        </div>'
             );
-            let past_events_array = data.results.reverse().slice(0, 5);
+            let past_events_array = data.results.reverse(); //.slice(0, 100);
+
+            let TrackYears = [];
+
             for (var i in past_events_array) {
               let event = past_events_array[i];
-              let name = event.name;
-              console.log(getFormattedDateObject(event.time));
-              $(".mupast-meetups", ctx).append(
-                '<div class="mupast-main"> \
-                                <div class= "mupast-inner"> \
-                                    <div class="mupast-inner-text">' +
-                  getFormattedDate(event.time).replace(",", "") +
-                  ' </div> \
-                                    </div> \
-                                        <div class="mupast-content"> \
-                                            <div class="mupast-widget-heading"><a class="hover-animation" href="' +
-                  event.event_url +
-                  '" target="_blank">' +
-                  name +
-                  "</a></div> \
-                                        </div> \
-                                    </div>"
-              );
+
+              let eventDate = getFormattedDateObject(event.time);
+
+              if (!TrackYears.includes(eventDate.year)) {
+                TrackYears.push(eventDate.year);
+              }
             }
+
+            console.log(TrackYears);
+
+            TrackYears.forEach(year => {
+              $(".years", ctx).append(
+                '<div id="year-' +
+                  year +
+                  '" class="year show" onclick="getEventsFor(this.id, this.textContent)">' +
+                  year +
+                  "</div>"
+              );
+            });
+
+            past_events_array.forEach(event => {
+              let eventDate = getFormattedDateObject(event.time);
+
+              let showClass = "";
+
+              if (eventDate.year === TrackYears[0]) {
+                showClass = "show";
+              }
+
+              $(".months").append(
+                '<div id="' +
+                  eventDate.year +
+                  '" class="event ' +
+                  showClass +
+                  '" onclick="getAgenda(event, this.id, this.textContent)">' +
+                  eventDate.month +
+                  " " +
+                  eventDate.date +
+                  "</div >"
+              );
+
+              $(".content").append(
+                // 2019-Jan 31
+                '<div id="' +
+                  eventDate.year +
+                  "-" +
+                  eventDate.month +
+                  " " +
+                  eventDate.date +
+                  '" class="speakers show">' +
+                  '<div class="past-title">' +
+                  event.name +
+                  "</div>" +
+                  "</div>"
+              );
+            });
+
+            $($(".years")[0].childNodes[1]).addClass("active");
+            $($(".months")[0].childNodes[1]).addClass("active");
+            $($(".content")[0].childNodes[1]).addClass("active");
+            setClickListeners();
+            highlightMenu();
+            trimLongDescription();
           }
         }
       });
