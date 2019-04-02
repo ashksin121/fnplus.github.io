@@ -319,6 +319,7 @@ var load_widget = function($, ctx) {
             let past_events_array = data.results.reverse(); //.slice(0, 100);
 
             let TrackYears = [];
+            let TrackMonths = [];
 
             for (var i in past_events_array) {
               let event = past_events_array[i];
@@ -351,17 +352,20 @@ var load_widget = function($, ctx) {
                 showClass = "show";
               }
 
-              $(".months").append(
-                '<div id="' +
-                  eventDate.year +
-                  '" class="event ' +
-                  showClass +
-                  '" onclick="getAgenda(event, this.id, this.textContent)">' +
-                  eventDate.month +
-                  " " +
-                  eventDate.date +
-                  "</div >"
-              );
+              let eventMonthDate = eventDate.month + " " + eventDate.date;
+
+              if (!TrackMonths.includes(eventMonthDate)) {
+                TrackMonths.push(eventMonthDate);
+                $(".months").append(
+                  '<div id="' +
+                    eventDate.year +
+                    '" class="event ' +
+                    showClass +
+                    '" onclick="getAgenda(event, this.id, this.textContent)">' +
+                    eventMonthDate +
+                    "</div >"
+                );
+              }
 
               let description = event.description;
 
