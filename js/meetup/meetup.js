@@ -363,6 +363,16 @@ var load_widget = function($, ctx) {
                   "</div >"
               );
 
+              let description = event.description;
+
+              if (description.length > 1000) {
+                description =
+                  description.substring(0, 1000) +
+                  '.... <a href="' +
+                  event.event_url +
+                  '" target="_blank">(Read More)</a>';
+              }
+
               $(".content").append(
                 // 2019-Jan 31
                 '<div id="' +
@@ -373,8 +383,15 @@ var load_widget = function($, ctx) {
                   eventDate.date +
                   '" class="speakers show">' +
                   '<div class="past-title">' +
+                  '<a href="' +
+                  event.event_url +
+                  '" target="_blank">' +
                   event.name +
-                  "</div>" +
+                  "</a>" +
+                  "</div> <br />" +
+                  '<div class="past-description"> ' +
+                  description +
+                  " </div>" +
                   "</div>"
               );
             });

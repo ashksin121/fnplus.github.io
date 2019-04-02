@@ -75,10 +75,10 @@
   float: none;
   font: normal;
   font-family: inherit;
-  font-size: medium;
+  /* font-size: medium; */
   font-style: normal;
   font-variant: normal;
-  font-weight: normal;
+  /* font-weight: normal; */
   height: auto;
   hyphens: none;
   left: auto;
@@ -122,8 +122,8 @@
   right: auto;
   tab-size: 8;
   table-layout: auto;
-  text-align: inherit;
-  text-align-last: auto;
+  /* text-align: inherit; */
+  /* text-align-last: auto; */
   text-decoration: none;
   text-decoration-color: inherit;
   text-decoration-line: none;

@@ -19,7 +19,6 @@
 .archive .previous-editions .events {
   display: flex;
   flex-flow: row nowrap;
-  text-align: center;
   flex: 1 1 25%;
 }
 .archive .previous-editions .events .years {
@@ -67,4 +66,42 @@
 
 .archive .previous-editions .content .speakers.active {
   display: block !important;
+}
+
+/* Custom Styles */
+
+.past-title {
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.past-title a:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.past-title a:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.past-description {
+  font-size: 13px;
+}
+
+.past-description a {
+  font-weight: 600;
+}
+
+.past-description a:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.past-description a:focus {
+  color: #000;
+  text-decoration: none;
 }
