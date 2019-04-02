@@ -99,6 +99,14 @@ var load_widget = function($, ctx) {
         date.getFullYear().toString()
       );
     },
+    getFormattedDateObject = function(millis) {
+      var date = new Date(millis);
+      return {
+        date: addLeadingZero(date.getDate()),
+        month: months[date.getMonth()],
+        year: date.getFullYear()
+      };
+    },
     getFormattedTime = function(millis) {
       var time = new Date(millis),
         hours = time.getHours(),
@@ -170,7 +178,10 @@ var load_widget = function($, ctx) {
         if (data.status && data.status.match(/^200/) == null) {
           alert(data.status + ": " + data.details);
         } else {
-          if (data.results.length == 0) {
+          if (
+            data.results.length == 0 ||
+            data.results[0].name.indexOf("RSVP") !== -1
+          ) {
             $(".next-event", ctx).append(
               '<span class="mup-tlabel mup-meetups">No Jams at the Moment.\
                         <br>\
@@ -279,6 +290,7 @@ var load_widget = function($, ctx) {
           );
           alert(data.status + ": " + data.details);
         } else {
+          // console.log(data.results);
           if (data.results.length == 0) {
             $(".mupast-widget", ctx).append(
               '<div class="mupast-nojams">No Jams</div>'
@@ -297,6 +309,7 @@ var load_widget = function($, ctx) {
             for (var i in past_events_array) {
               let event = past_events_array[i];
               let name = event.name;
+              console.log(getFormattedDateObject(event.time));
               $(".mupast-meetups", ctx).append(
                 '<div class="mupast-main"> \
                                 <div class= "mupast-inner"> \
