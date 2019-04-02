@@ -393,6 +393,11 @@ var load_widget = function($, ctx) {
                   event.name +
                   "</a>" +
                   "</div> <br />" +
+                  "<div class='past-time'><span>Time:</span> " +
+                  getFormattedTime(event.time) +
+                  " </div> <div class='past-attended'> <div class='past-separator'>|</div> <span>" +
+                  event.yes_rsvp_count +
+                  " Legit Geeks </span> attended</div><br />" +
                   '<div class="past-description"> ' +
                   description +
                   " </div>" +
