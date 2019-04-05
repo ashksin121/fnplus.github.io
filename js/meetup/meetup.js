@@ -290,7 +290,6 @@ var load_widget = function($, ctx) {
           );
           alert(data.status + ": " + data.details);
         } else {
-          console.log(data.results);
           if (data.results.length == 0) {
             $(".mupast-widget", ctx).append(
               '<div class="mupast-nojams">No Jams</div>'
@@ -330,8 +329,6 @@ var load_widget = function($, ctx) {
                 TrackYears.push(eventDate.year);
               }
             }
-
-            console.log(TrackYears);
 
             TrackYears.forEach(year => {
               $(".years", ctx).append(
