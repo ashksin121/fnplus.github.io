@@ -133,3 +133,16 @@
 .past-separator {
   padding: 0 10px;
 }
+
+.past-meetup-btn {
+  margin-top: 40px !important;
+  float: right;
+}
+
+.past-meetup-btn a {
+  letter-spacing: 1px;
+}
+
+.past-meetup-btn i {
+  margin-left: 5px;
+}

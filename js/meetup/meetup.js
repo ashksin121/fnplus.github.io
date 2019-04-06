@@ -313,7 +313,13 @@ var load_widget = function($, ctx) {
               <div class="content"> \
               </div> \
               </div> \
-        </div>'
+        </div> \
+        </section> \
+        <div class="past-meetup-btn"> <a class="btn-view" \
+         target="_blank" \
+         href="https://www.meetup.com/geek-meetup-chennai/" \
+         >Check out our Meetup Page<i class="icon-arrow-right3"></i></a> \
+         </div>'
             );
             let past_events_array = data.results.reverse(); //.slice(0, 100);
 
