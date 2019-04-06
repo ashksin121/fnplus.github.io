@@ -185,7 +185,7 @@ var load_widget = function($, ctx) {
             $(".next-event", ctx).append(
               '<span class="mup-tlabel mup-meetups">No Jams at the Moment.\
                         <br>\
-                         Subscribe to our Mailing List to be Notified.</span>'
+                         Join our Meetup Group to get Updates.</span>'
             );
           } else {
             if (data.results.length > 1) {
@@ -403,7 +403,10 @@ var load_widget = function($, ctx) {
                   " Legit Geeks </span> attended</div><br />" +
                   '<div class="past-description"> ' +
                   description +
-                  " </div>" +
+                  " </div><br/>" +
+                  "<div class='past-know-more'><a href='" +
+                  event.event_url +
+                  "' target='_blank'>Know More</a></div>" +
                   "</div>"
               );
             });
