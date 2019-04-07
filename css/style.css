@@ -1583,6 +1583,7 @@ canvas {
 
 .btn-view:focus {
   outline: 0;
+  text-decoration: none;
 }
 
 .btn-view:before {

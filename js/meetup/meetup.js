@@ -99,6 +99,14 @@ var load_widget = function($, ctx) {
         date.getFullYear().toString()
       );
     },
+    getFormattedDateObject = function(millis) {
+      var date = new Date(millis);
+      return {
+        date: addLeadingZero(date.getDate()),
+        month: months[date.getMonth()],
+        year: date.getFullYear()
+      };
+    },
     getFormattedTime = function(millis) {
       var time = new Date(millis),
         hours = time.getHours(),
@@ -170,11 +178,14 @@ var load_widget = function($, ctx) {
         if (data.status && data.status.match(/^200/) == null) {
           alert(data.status + ": " + data.details);
         } else {
-          if (data.results.length == 0) {
+          if (
+            data.results.length == 0 ||
+            data.results[0].name.indexOf("RSVP") !== -1
+          ) {
             $(".next-event", ctx).append(
               '<span class="mup-tlabel mup-meetups">No Jams at the Moment.\
                         <br>\
-                         Subscribe to our Mailing List to be Notified.</span>'
+                         Join our Meetup Group to get Updates.</span>'
             );
           } else {
             if (data.results.length > 1) {
@@ -291,29 +302,121 @@ var load_widget = function($, ctx) {
             );
 
             $(".mupast-widget", ctx).append(
-              '<div class="mupast-meetups"></div>'
+              '<div class="mupast-meetups">\
+          <section id="archive" class="archive reset-this"> \
+            <div class= "previous-editions" > \
+            <div class="events"> \
+              <div class="years"> \
+              </div> \
+              <div class="months"> \
+              </div> \
+              <div class="content"> \
+              </div> \
+              </div> \
+        </div> \
+        </section> \
+        <div class="past-meetup-btn"> <a class="btn-view" \
+         target="_blank" \
+         href="https://www.meetup.com/geek-meetup-chennai/" \
+         >Check out our Meetup Page<i class="icon-arrow-right3"></i></a> \
+         </div>'
             );
-            let past_events_array = data.results.reverse().slice(0, 5);
+            let past_events_array = data.results.reverse(); //.slice(0, 100);
+
+            let TrackYears = [];
+            let TrackMonths = [];
+
             for (var i in past_events_array) {
               let event = past_events_array[i];
-              let name = event.name;
-              $(".mupast-meetups", ctx).append(
-                '<div class="mupast-main"> \
-                                <div class= "mupast-inner"> \
-                                    <div class="mupast-inner-text">' +
-                  getFormattedDate(event.time).replace(",", "") +
-                  ' </div> \
-                                    </div> \
-                                        <div class="mupast-content"> \
-                                            <div class="mupast-widget-heading"><a class="hover-animation" href="' +
+
+              let eventDate = getFormattedDateObject(event.time);
+
+              if (!TrackYears.includes(eventDate.year)) {
+                TrackYears.push(eventDate.year);
+              }
+            }
+
+            TrackYears.forEach(year => {
+              $(".years", ctx).append(
+                '<div id="year-' +
+                  year +
+                  '" class="year show" onclick="getEventsFor(this.id, this.textContent)">' +
+                  year +
+                  "</div>"
+              );
+            });
+
+            past_events_array.forEach(event => {
+              let eventDate = getFormattedDateObject(event.time);
+
+              let showClass = "";
+
+              if (eventDate.year === TrackYears[0]) {
+                showClass = "show";
+              }
+
+              let eventMonthDate = eventDate.month + " " + eventDate.date;
+
+              if (!TrackMonths.includes(eventMonthDate)) {
+                TrackMonths.push(eventMonthDate);
+                $(".months").append(
+                  '<div id="' +
+                    eventDate.year +
+                    '" class="event ' +
+                    showClass +
+                    '" onclick="getAgenda(event, this.id, this.textContent)">' +
+                    eventMonthDate +
+                    "</div >"
+                );
+              }
+
+              let description = event.description;
+
+              if (description.length > 1000) {
+                description =
+                  description.substring(0, 1000) +
+                  '.... <a href="' +
+                  event.event_url +
+                  '" target="_blank">(Read More)</a>';
+              }
+
+              $(".content").append(
+                // 2019-Jan 31
+                '<div id="' +
+                  eventDate.year +
+                  "-" +
+                  eventDate.month +
+                  " " +
+                  eventDate.date +
+                  '" class="speakers show">' +
+                  '<div class="past-title">' +
+                  '<a href="' +
                   event.event_url +
                   '" target="_blank">' +
-                  name +
-                  "</a></div> \
-                                        </div> \
-                                    </div>"
+                  event.name +
+                  "</a>" +
+                  "</div> <br />" +
+                  "<div class='past-time'><span>Time:</span> " +
+                  getFormattedTime(event.time) +
+                  " </div> <div class='past-attended'> <div class='past-separator'>|</div> <span>" +
+                  event.yes_rsvp_count +
+                  " Legit Geeks </span> attended</div><br />" +
+                  '<div class="past-description"> ' +
+                  description +
+                  " </div><br/>" +
+                  "<div class='past-know-more'><a href='" +
+                  event.event_url +
+                  "' target='_blank'>Know More</a></div><br/>" +
+                  "</div>"
               );
-            }
+            });
+
+            $($(".years")[0].childNodes[1]).addClass("active");
+            $($(".months")[0].childNodes[1]).addClass("active");
+            $($(".content")[0].childNodes[1]).addClass("active");
+            setClickListeners();
+            highlightMenu();
+            trimLongDescription();
           }
         }
       });
