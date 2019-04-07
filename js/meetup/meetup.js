@@ -406,7 +406,7 @@ var load_widget = function($, ctx) {
                   " </div><br/>" +
                   "<div class='past-know-more'><a href='" +
                   event.event_url +
-                  "' target='_blank'>Know More</a></div>" +
+                  "' target='_blank'>Know More</a></div><br/>" +
                   "</div>"
               );
             });
