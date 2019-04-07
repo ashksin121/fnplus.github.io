@@ -165,7 +165,7 @@
 
 @media only screen and (max-width: 768px) {
   .archive .previous-editions {
-    width: 100%;
+    width: 98%;
   }
 
   .archive .previous-editions .events .years {
@@ -185,7 +185,7 @@
 
   .archive .previous-editions .events .months .event {
     height: 15px;
-    padding: 5px;
+    padding: 5px 2px 5px 5px;
   }
 
   .archive .previous-editions .content .speakers {
