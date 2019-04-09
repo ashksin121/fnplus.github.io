@@ -216,6 +216,17 @@
             box-sizing: border-box;
         }
 
+        .modal-header{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #000 !important;
+            z-index: 100;
+            font-size: 12px;
+            border: none;
+        }
+
+
         .modal {
             display: none;
             /* Hidden by default */
@@ -279,29 +290,11 @@
             }
         }
 
-        /* The Close Button */
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
+        .close-modal:hover,
+        .close-modal:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
-        }
-
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
-
-        .modal-body {
-            padding: 2px 16px;
         }
 
         .modal-footer {
@@ -312,6 +305,11 @@
 
         p, span{
             color: #000;
+        }
+
+        .job-btn{
+            letter-spacing: 1px;
+            padding: 3px 7px;
         }
     </style>
 </head>
@@ -357,16 +355,15 @@
                 <div class="col-md-12 col-pb-sm text-center">
                     <h2>Jobs</h2>
                     <h4 style="margin: auto 40px;">Not able to find right candidate with proven skills for your startup/company in the crowd of engineers with no skills? Fret not, Connect directly with exclusively curated geeks of Fnplus community & forget about your worries about finding skilled candidates again.</h4>
-                    <button class="btn-success" id="myBtn" style="margin-top: 50px;"> 1.Register your company</button>
-                    <button class="btn-success" id="myBtn2" style="margin-top: 50px; margin-left:10px;"> 2.Post a job</button>
+                    <button class="btn-view job-btn" id="myBtn" style="margin-top: 50px;"> 1. Register your company</button>
+                    <br/>
+                    <button class="btn-view job-btn" id="myBtn2" style="margin-top: 30px;"> 2. Post a job</button>
                 </div>
                 <!-- modal for organise jam form -->
                 <div id="myModal" class="modal">
                     <!-- Modal for company -->
                     <div class="modal-content">
-                        <div class="modal-header" style="height:25px; background-color:black;">
-                            <span class="close">&times;</span>
-                        </div>
+                            <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
                             <iframe class="airtable-embed" src="https://airtable.com/embed/shrYYsp56Ymu6LP6M?backgroundColor=red"
                                 frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
@@ -377,9 +374,7 @@
                 <div id="myModal2" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <div class="modal-header" style="height:25px; background-color:black;">
-                            <span class="close">&times;</span>
-                        </div>
+                        <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
                             <iframe class="airtable-embed" src="https://airtable.com/embed/shrgKRFKrWpend65f?backgroundColor=red"
                                 frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
@@ -446,7 +441,8 @@
         var btn2 = document.getElementById("myBtn2");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var close = document.getElementsByClassName("close-modal")[0];
+        var close2 = document.getElementsByClassName("close-modal")[1];
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
@@ -457,20 +453,19 @@
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        close.onclick = function () {
             modal.style.display = "none";
+        }
+
+        close2.onclick = function () {
             modal2.style.display = "none";
         }
 
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-            if (event.target == modal) {
+            if (event.target == modal || event.target == modal2 ) {
                 modal.style.display = "none";
-            }
-        }
-        window.onclick = function (event) {
-            if (event.target == modal2) {
                 modal2.style.display = "none";
             }
         }
