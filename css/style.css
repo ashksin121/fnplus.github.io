@@ -1637,10 +1637,28 @@ canvas {
 }
 
 .job-image {
-  width: 90%;
+  width: 100%;
   display: block;
   margin: auto;
 }
 
+.job-available {
+  text-align: center;
+  font-weight: 700;
+}
+
 @media only screen and (max-width: 768px) {
+  .job-heading {
+    margin: 15px;
+    font-size: 40px;
+  }
+
+  .job-heading-details {
+    margin: 15px;
+    font-size: 16px;
+  }
+
+  #colorlib-services {
+    padding: 2em 0 1em 0 !important;
+  }
 }
