@@ -1662,3 +1662,12 @@ canvas {
     padding: 2em 0 1em 0 !important;
   }
 }
+
+.business-link {
+  font-weight: 700;
+  /* font-size: 20px; */
+  color: #000;
+  margin-top: 100px !important;
+  text-transform: uppercase;
+  margin-bottom: 10px !important;
+}

@@ -40,176 +40,8 @@
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- Backgroung animation -->
+
     <style>
-        /* body {
-            background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-            background: -webkit-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-            background: linear-gradient(45deg, #f1f7f6 0%, #c2c7ca 29%, #c7c2c7 66%);
-            background-size: 400% 400%;
-            -webkit-animation: Gradient 15s ease infinite;
-            -moz-animation: Gradient 15s ease infinite;
-            animation: Gradient 15s ease infinite;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: space-evenly;
-
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before,
-        body::after {
-            content: "";
-            width: 70vmax;
-            height: 70vmax;
-            position: absolute;
-            background: rgba(255, 255, 255, 0.07);
-            left: -20vmin;
-            top: -20vmin;
-            animation: morph 15s linear infinite alternate, spin 20s linear infinite;
-            z-index: 1;
-            will-change: border-radius, transform;
-            transform-origin: 55% 55%;
-            pointer-events: none;
-        }
-
-        body::after {
-            width: 70vmin;
-            height: 70vmin;
-            left: auto;
-            right: -10vmin;
-            top: auto;
-            bottom: 0;
-            animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
-            transform-origin: 20% 20%;
-        }
-
-        @-webkit-keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @-moz-keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @keyframes morph {
-            0% {
-                border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-            }
-
-            100% {
-                border-radius: 40% 60%;
-            }
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(1turn);
-            }
-        }
-
-        .st0 {
-            display: none;
-        }
-
-        .st1 {
-            display: inline;
-        }
-
-        .st2 {
-            opacity: 0.29;
-        }
-
-        .st3 {
-            fill: #FFFFFF;
-        }
-
-        .st4 {
-            clip-path: url(#SVGID_2_);
-            fill: #FFFFFF;
-        }
-
-        .st5 {
-            clip-path: url(#SVGID_4_);
-        }
-
-        .st6 {
-            clip-path: url(#SVGID_6_);
-        }
-
-        .st7 {
-            clip-path: url(#SVGID_8_);
-        }
-
-        .st8 {
-            clip-path: url(#SVGID_10_);
-        }
-
-        .st9 {
-            fill: none;
-        }
-
-        .st10 {
-            clip-path: url(#SVGID_12_);
-        }
-
-        .st11 {
-            opacity: 0.7;
-        }
-
-        .st12 {
-            clip-path: url(#SVGID_14_);
-        }
-
-        .st13 {
-            opacity: 0.2;
-        }
-
-        .st14 {
-            clip-path: url(#SVGID_16_);
-        }
-
-        .st15 {
-            opacity: 0.3;
-            fill: #FFFFFF;
-            enable-background: new;
-        } */
 
         * {
             box-sizing: border-box;
@@ -311,9 +143,12 @@
                             <li><a href="work.html">What we do</a></li>
                             <li><a href="https://medium.com/fnplus">Blog</a></li>
                             <li><a href="meetup.html">Explore Local Jams</a></li>
-                            <li class="active"><a href="volunteer.html">Organise a Jam</a></li>
+                            <li><a href="volunteer.html">Organise a Jam</a></li>
                             <li><a href="about.html">About</a></li>
                             <li><a href="contact.html">Contact</a></li>
+                            <li class="business-link">Business</li>
+                            <li class="active"><a href="jobs.html">Jobs</a></li>
+                            <li><a href="https://www.geeksgarages.com/">Geeks Garage</a></li>
                         </ul>
                     </div>
                 </div>
@@ -343,7 +178,7 @@
                 <div class="col-md-6 col-pb-sm" style="margin-top: 40px;">
                     <h2 class="job-heading">Jobs</h2>
                     <h4 class="job-heading-details">Not able to find right candidate with proven skills for your startup/company in the crowd of engineers with no skills? Fret not, Connect directly with exclusively curated geeks of Fnplus community & forget about your worries about finding skilled candidates again.</h4>
-                     <div class="job-register"><!--<div>Start Here</div><i class="job-register-arrow icon-arrow-right2"></i>--><button class="btn-view job-btn job-register-btn" id="myBtn">Register your company</button></div>
+                     <div class="job-register"><button class="btn-view job-btn job-register-btn" id="myBtn">Register your company</button></div>
                     <br/>
 
                     <div class="job-post text-center">
@@ -425,9 +260,7 @@
                 </div>
             </div>
     </footer>
-    <!-- modal -->
     <script>
-        // Get the modal
         var modal = document.getElementById('myModal');
         var modal2 = document.getElementById('myModal2');
 
