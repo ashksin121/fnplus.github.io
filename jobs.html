@@ -42,7 +42,7 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- Backgroung animation -->
     <style>
-        body {
+        /* body {
             background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
             background: -webkit-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
             background: linear-gradient(45deg, #f1f7f6 0%, #c2c7ca 29%, #c7c2c7 66%);
@@ -50,7 +50,6 @@
             -webkit-animation: Gradient 15s ease infinite;
             -moz-animation: Gradient 15s ease infinite;
             animation: Gradient 15s ease infinite;
-            /*min-height: calc(100vh - 2rem);*/
             display: flex;
             flex-direction: column;
             align-items: stretch;
@@ -210,7 +209,7 @@
             opacity: 0.3;
             fill: #FFFFFF;
             enable-background: new;
-        }
+        } */
 
         * {
             box-sizing: border-box;
@@ -229,28 +228,18 @@
 
         .modal {
             display: none;
-            /* Hidden by default */
             position: fixed;
-            /* Stay in place */
             z-index: 1;
-            /* Sit on top */
             padding-top: 100px;
-            /* Location of the box */
             left: 0;
             top: 0;
             width: 100%;
-            /* Full width */
             height: 100%;
-            /* Full height */
             overflow: auto;
-            /* Enable scroll if needed */
             background-color: rgb(0, 0, 0);
-            /* Fallback color */
             background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
         }
 
-        /* Modal Content */
         .modal-content {
             position: relative;
             background-color: #fefefe;
@@ -307,10 +296,6 @@
             color: #000;
         }
 
-        .job-btn{
-            letter-spacing: 1px;
-            padding: 3px 7px;
-        }
     </style>
 </head>
 
@@ -352,12 +337,19 @@
 
         <div id="colorlib-services" style="padding-bottom:0em;">
             <div class="row">
-                <div class="col-md-12 col-pb-sm text-center">
-                    <h2>Jobs</h2>
-                    <h4 style="margin: auto 40px;">Not able to find right candidate with proven skills for your startup/company in the crowd of engineers with no skills? Fret not, Connect directly with exclusively curated geeks of Fnplus community & forget about your worries about finding skilled candidates again.</h4>
-                    <button class="btn-view job-btn" id="myBtn" style="margin-top: 50px;"> 1. Register your company</button>
+                <div class="col-md-6">
+                    <img class="job-image" src="images/job2.jpg" alt="">
+                </div>
+                <div class="col-md-6 col-pb-sm" style="margin-top: 20px;">
+                    <h2 class="job-heading">Jobs</h2>
+                    <h4 class="job-heading-details">Not able to find right candidate with proven skills for your startup/company in the crowd of engineers with no skills? Fret not, Connect directly with exclusively curated geeks of Fnplus community & forget about your worries about finding skilled candidates again.</h4>
+                     <div class="job-register"><!--<div>Start Here</div><i class="job-register-arrow icon-arrow-right2"></i>--><button class="btn-view job-btn job-register-btn" id="myBtn">Register your company</button></div>
                     <br/>
-                    <button class="btn-view job-btn" id="myBtn2" style="margin-top: 30px;"> 2. Post a job</button>
+
+                    <div class="job-post text-center">
+                    <div>Already registered? Start posting</div><i class="job-register-arrow icon-arrow-down2"></i><br/>
+                    <button class="btn-view job-btn" id="myBtn2">Post a job</button>
+                    </div>
                 </div>
                 <!-- modal for organise jam form -->
                 <div id="myModal" class="modal">
@@ -384,6 +376,9 @@
             </div>
         </div>
         <!-- Meetup airtable -->
+        <div>
+            <h1 style="text-align: center">Available Internships</h1>
+        </div>
         <iframe class="airtable-embed" src="https://airtable.com/embed/shrivghziFeqy8XuD?backgroundColor=red&viewControls=on"
             frameborder="1" onmousewheel="" width="95%" style="border: 2px solid black;height:100vh;display:block;margin: auto;"></iframe>
         <!-- Meetup airtable -->

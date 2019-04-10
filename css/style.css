@@ -1601,3 +1601,46 @@ canvas {
 .btn-view:hover:before {
   top: 0;
 }
+
+/* Jobs Page */
+
+.job-btn {
+  letter-spacing: 1px;
+  padding: 3px 7px;
+}
+
+.job-register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  color: #000;
+}
+
+.job-register-arrow {
+  margin: 0 10px;
+}
+
+.job-post {
+  color: #000;
+  margin-bottom: 50px;
+}
+
+.job-heading {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.job-heading-details {
+  font-size: 20px;
+  margin: 0px 0px 40px 0px;
+}
+
+.job-image {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+}
