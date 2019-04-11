@@ -1670,3 +1670,11 @@ canvas {
   text-transform: uppercase;
   /* margin-bottom: 10px !important; */
 }
+
+/* Loading icon for iframe */
+
+iframe {
+  background-image: url("/images/91.gif");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
