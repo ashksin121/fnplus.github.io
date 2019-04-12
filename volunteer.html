@@ -42,204 +42,36 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
     <!-- Backgroung animation -->
     <style>
-        body {
-            background: -moz-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-            background: -webkit-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
-            background: linear-gradient(45deg, #f1f7f6 0%, #c2c7ca 29%, #c7c2c7 66%);
-            background-size: 400% 400%;
-            -webkit-animation: Gradient 15s ease infinite;
-            -moz-animation: Gradient 15s ease infinite;
-            animation: Gradient 15s ease infinite;
-            /*min-height: calc(100vh - 2rem);*/
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: space-evenly;
-
-            position: relative;
-            overflow-x: hidden;
-        }
-
-        body::before,
-        body::after {
-            content: "";
-            width: 70vmax;
-            height: 70vmax;
-            position: absolute;
-            background: rgba(255, 255, 255, 0.07);
-            left: -20vmin;
-            top: -20vmin;
-            animation: morph 15s linear infinite alternate, spin 20s linear infinite;
-            z-index: 1;
-            will-change: border-radius, transform;
-            transform-origin: 55% 55%;
-            pointer-events: none;
-        }
-
-        body::after {
-            width: 70vmin;
-            height: 70vmin;
-            left: auto;
-            right: -10vmin;
-            top: auto;
-            bottom: 0;
-            animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
-            transform-origin: 20% 20%;
-        }
-
-        @-webkit-keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @-moz-keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @keyframes Gradient {
-            0% {
-                background-position: 0 50%
-            }
-
-            50% {
-                background-position: 100% 50%
-            }
-
-            100% {
-                background-position: 0 50%
-            }
-        }
-
-        @keyframes morph {
-            0% {
-                border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
-            }
-
-            100% {
-                border-radius: 40% 60%;
-            }
-        }
-
-        @keyframes spin {
-            to {
-                transform: rotate(1turn);
-            }
-        }
-
-        .st0 {
-            display: none;
-        }
-
-        .st1 {
-            display: inline;
-        }
-
-        .st2 {
-            opacity: 0.29;
-        }
-
-        .st3 {
-            fill: #FFFFFF;
-        }
-
-        .st4 {
-            clip-path: url(#SVGID_2_);
-            fill: #FFFFFF;
-        }
-
-        .st5 {
-            clip-path: url(#SVGID_4_);
-        }
-
-        .st6 {
-            clip-path: url(#SVGID_6_);
-        }
-
-        .st7 {
-            clip-path: url(#SVGID_8_);
-        }
-
-        .st8 {
-            clip-path: url(#SVGID_10_);
-        }
-
-        .st9 {
-            fill: none;
-        }
-
-        .st10 {
-            clip-path: url(#SVGID_12_);
-        }
-
-        .st11 {
-            opacity: 0.7;
-        }
-
-        .st12 {
-            clip-path: url(#SVGID_14_);
-        }
-
-        .st13 {
-            opacity: 0.2;
-        }
-
-        .st14 {
-            clip-path: url(#SVGID_16_);
-        }
-
-        .st15 {
-            opacity: 0.3;
-            fill: #FFFFFF;
-            enable-background: new;
-        }
 
         * {
             box-sizing: border-box;
         }
 
+        .modal-header{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: #000 !important;
+            z-index: 100;
+            font-size: 12px;
+            border: none;
+        }
+
+
         .modal {
             display: none;
-            /* Hidden by default */
             position: fixed;
-            /* Stay in place */
             z-index: 1;
-            /* Sit on top */
             padding-top: 100px;
-            /* Location of the box */
             left: 0;
             top: 0;
             width: 100%;
-            /* Full width */
             height: 100%;
-            /* Full height */
             overflow: auto;
-            /* Enable scroll if needed */
             background-color: rgb(0, 0, 0);
-            /* Fallback color */
             background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
         }
 
-        /* Modal Content */
         .modal-content {
             position: relative;
             background-color: #fefefe;
@@ -279,29 +111,11 @@
             }
         }
 
-        /* The Close Button */
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
+        .close-modal:hover,
+        .close-modal:focus {
             color: #000;
             text-decoration: none;
             cursor: pointer;
-        }
-
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #5cb85c;
-            color: white;
-        }
-
-        .modal-body {
-            padding: 2px 16px;
         }
 
         .modal-footer {
@@ -358,25 +172,33 @@
             </div>
         </header>
 
-        <div id="colorlib-services" style="padding-bottom:0em;">
+        <div id="colorlib-services" class="container" style="padding-top: 8em; padding-bottom: 2em">
             <div class="row">
-                <div class="col-md-12 col-pb-sm text-center">
-                    <h2>Meetups</h2>
-                    <h4 style="margin: auto 40px;">Talk about Avengers or Justice league, each & every hero plays an
-                        unique role but even they need to collaborate to win, so does our community! Each and every
-                        geek we have is a hero & without your contribution we can't succeed. Take a step & share your
-                        superpower, conduct a meetup session. Get geeky rewards for your contribution(s).</h4>
-                    <button class="btn-success" id="myBtn" style="margin-top: 50px;">Organize a Jam</button>
-                    <button class="btn-success" id="myBtn2" style="margin-top: 50px; margin-left:10px;">Poll : What's
-                        next?</button>
+
+                <div class="col-md-6 col-pb-sm" style="margin-top: 40px;">
+                    <h2 class="job-heading">Meetups</h2>
+                    <h4 class="job-heading-details">Talk about Avengers or Justice league, each & every hero plays an unique role but
+                        even they need to collaborate to win,
+                        so does our community! Each and every geek we have is a hero & without your contribution we can't succeed. Take
+                        a step &
+                        share your superpower, conduct a meetup session. Get geeky rewards for your contribution(s).</h4>
+                    <div class="job-register"><button class="btn-view job-btn job-register-btn" id="myBtn">Organize a Jam</button></div>
+                    <br />
+
+                    <div class="job-post text-center">
+                        <button class="btn-view job-btn" id="myBtn2">Poll: What's Next</button>
+                    </div>
                 </div>
+
+                <div class="col-md-6">
+                    <img class="job-image" src="images/volunteer1.png" alt="jobs.jpg">
+                </div>
+
                 <!-- modal for organise jam form -->
                 <div id="myModal" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <div class="modal-header" style="height:25px; background-color:black;">
-                            <span class="close">&times;</span>
-                        </div>
+                        <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
                             <iframe class="airtable-embed" src="https://airtable.com/embed/shrGzMiUwe3GnEHlK?backgroundColor=purple"
                                 frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
@@ -387,9 +209,7 @@
                 <div id="myModal2" class="modal">
                     <!-- Modal content -->
                     <div class="modal-content">
-                        <div class="modal-header" style="height:25px; background-color:black;">
-                            <span class="close">&times;</span>
-                        </div>
+                        <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
                             <iframe class="airtable-embed" src="https://airtable.com/embed/shrw9wPfXS1Cdf2YT?backgroundColor=purple"
                                 frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
@@ -447,7 +267,6 @@
     </footer>
     <!-- modal -->
     <script>
-        // Get the modal
         var modal = document.getElementById('myModal');
         var modal2 = document.getElementById('myModal2');
 
@@ -456,7 +275,8 @@
         var btn2 = document.getElementById("myBtn2");
 
         // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
+        var close = document.getElementsByClassName("close-modal")[0];
+        var close2 = document.getElementsByClassName("close-modal")[1];
 
         // When the user clicks the button, open the modal
         btn.onclick = function () {
@@ -467,20 +287,19 @@
         }
 
         // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
+        close.onclick = function () {
             modal.style.display = "none";
+        }
+
+        close2.onclick = function () {
             modal2.style.display = "none";
         }
 
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-            if (event.target == modal) {
+            if (event.target == modal || event.target == modal2) {
                 modal.style.display = "none";
-            }
-        }
-        window.onclick = function (event) {
-            if (event.target == modal2) {
                 modal2.style.display = "none";
             }
         }
