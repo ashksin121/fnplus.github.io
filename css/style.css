@@ -1678,3 +1678,17 @@ iframe {
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
+
+.geek-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .geek-container {
+    height: 80px;
+  }
+}
