@@ -1687,6 +1687,11 @@ iframe {
   justify-content: center;
 }
 
+.work-card-border {
+  border: #029843 6px solid;
+  padding: 20px;
+}
+
 @media only screen and (max-width: 768px) {
   .geek-container {
     height: 80px;
