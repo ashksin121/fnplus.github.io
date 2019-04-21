@@ -183,7 +183,7 @@ var load_widget = function($, ctx) {
             data.results[0].name.indexOf("RSVP") !== -1
           ) {
             $(".next-event", ctx).append(
-              '<span class="mup-tlabel mup-meetups">No Jams at the Moment.\
+              '<span class="mup-tlabel mup-meetups">No Meetups at the Moment.\
                         <br>\
                          Join our Meetup Group to get Updates.</span>'
             );
@@ -191,7 +191,7 @@ var load_widget = function($, ctx) {
             if (data.results.length > 1) {
               $(".mug-badge", ctx).append(
                 '<div class="muupcom-widget"> \
-                            <div class="mupast-heading">Upcoming Jams</div> \
+                            <div class="mupast-heading">Upcoming Meetups</div> \
                         </div>'
               );
 
@@ -286,18 +286,18 @@ var load_widget = function($, ctx) {
       $.getJSON($queries.past_events(), function(data) {
         if (data.status && data.status.match(/^200/) == null) {
           $(".mupast-widget", ctx).append(
-            '<div class="mupast-nojams">Upcoming Jams</div>'
+            '<div class="mupast-nojams">Upcoming Meetups</div>'
           );
           alert(data.status + ": " + data.details);
         } else {
           if (data.results.length == 0) {
             $(".mupast-widget", ctx).append(
-              '<div class="mupast-nojams">No Jams</div>'
+              '<div class="mupast-nojams">No Meetups</div>'
             );
           } else {
             $(".mug-badge", ctx).append(
               '<div class="mupast-widget"> \
-                            <div class="mupast-heading">Past Jams</div> \
+                            <div class="mupast-heading">Past Meetups</div> \
                         </div>'
             );
 
