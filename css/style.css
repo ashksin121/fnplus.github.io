@@ -1701,13 +1701,22 @@ iframe {
 /* sponsors page  */
 
 .sponsors-container-main {
-  margin-top: 100px;
+  margin-top: 200px;
+}
+
+.sponsors-container {
+  margin-bottom: 100px;
 }
 
 .sponsor-heading {
   text-align: center;
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .sponsor-image {
-  width: 100%;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
