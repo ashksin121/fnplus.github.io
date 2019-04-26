@@ -1697,3 +1697,17 @@ iframe {
     height: 80px;
   }
 }
+
+/* sponsors page  */
+
+.sponsors-container-main {
+  margin-top: 100px;
+}
+
+.sponsor-heading {
+  text-align: center;
+}
+
+.sponsor-image {
+  width: 100%;
+}
