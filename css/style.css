@@ -1720,3 +1720,21 @@ iframe {
   margin-left: auto;
   margin-right: auto;
 }
+
+.sponsor-message-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .sponsor-message-container {
+    height: 200px;
+  }
+
+  .sponsors-container-main {
+    margin-top: 100px;
+  }
+}
