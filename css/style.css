@@ -1730,7 +1730,14 @@ iframe {
 }
 
 .sponsor-second-row {
-  margin-top: 40px;
+  margin-top: 50px;
+}
+
+.sponsor-divider {
+  height: 3px;
+  width: 100px;
+  background-color: #029843;
+  margin: 20px auto;
 }
 
 @media only screen and (max-width: 768px) {
