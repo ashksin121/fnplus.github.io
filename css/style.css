@@ -1595,6 +1595,7 @@ canvas {
   right: 0;
   top: 100%;
   z-index: -1;
+  transition: top 0.09s ease-in;
   -webkit-transition: top 0.09s ease-in;
 }
 
@@ -1663,10 +1664,17 @@ canvas {
   }
 }
 
+.product-link a {
+  font-weight: 700 !important;
+  color: #000 !important;
+  text-transform: uppercase;
+  /* margin-bottom: 10px !important; */
+}
+
 .business-link a {
   font-weight: 700 !important;
   color: #000 !important;
-  margin-top: 100px !important;
+  margin-top: 50px !important;
   text-transform: uppercase;
   /* margin-bottom: 10px !important; */
 }
