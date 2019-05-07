@@ -1664,8 +1664,9 @@ canvas {
   }
 }
 
-.product-link a {
+.products-link a {
   font-weight: 700 !important;
+  font-size: 14px !important;
   color: #000 !important;
   text-transform: uppercase;
   /* margin-bottom: 10px !important; */
@@ -1674,9 +1675,17 @@ canvas {
 .business-link a {
   font-weight: 700 !important;
   color: #000 !important;
-  margin-top: 50px !important;
+  margin-top: 25px !important;
   text-transform: uppercase;
   /* margin-bottom: 10px !important; */
+}
+
+#business-content {
+  padding-left: 20px !important;
+}
+
+#products-content {
+  padding-left: 20px !important;
 }
 
 /* Loading icon for iframe */
