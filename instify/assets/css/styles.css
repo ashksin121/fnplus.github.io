@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900);
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -16,16 +16,16 @@
   height: 100%;
 }
 body {
-  font-family: 'Lato', Arial;
+  font-family: "Lato", Arial;
   color: #666666;
   -webkit-font-smoothing: antialiased;
 }
 a {
-  font-family: 'Lato', Arial;
+  font-family: "Lato", Arial;
   -webkit-font-smoothing: antialiased;
 }
 div.content {
-  overflow: hidden ;
+  overflow: hidden;
 }
 h1,
 h2,
@@ -44,8 +44,7 @@ h6,
 header .navbar-default {
   background: none;
   border: none;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  padding-top: 10px;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -53,7 +52,7 @@ header .navbar-default {
   transition: all 0.25s ease-in-out;
 }
 header .navbar-default ul.navbar-nav {
-  padding-top: 55px;
+  padding-top: 30px;
 }
 header .navbar-default ul.navbar-nav li a {
   text-transform: capitalize;
@@ -67,7 +66,7 @@ header .navbar-default ul.navbar-nav li a {
   transition: all 0.25s ease-in-out;
 }
 header .navbar-default ul.navbar-nav li a:after {
-  content: '';
+  content: "";
   width: 32px;
   background: none;
   height: 4px;
@@ -363,8 +362,8 @@ section#screens .slick-next:before {
   -o-border-radius: 5em;
   border-radius: 5em;
   line-height: 45px;
-  color: #CCC;
-  border: 2px solid #CCC;
+  color: #ccc;
+  border: 2px solid #ccc;
   width: 50px;
   display: inline-block;
   height: 50px;
@@ -500,7 +499,7 @@ section {
 section::before,
 section::after {
   position: absolute;
-  content: '';
+  content: "";
   pointer-events: none;
   overflow: hidden;
 }
@@ -525,7 +524,7 @@ section::after {
   z-index: 2;
 }
 .tp-caption {
-  font-family: 'Lato', Arial !important;
+  font-family: "Lato", Arial !important;
   -webkit-font-smoothing: antialiased;
 }
 .tp-caption.large_white_bold {
@@ -564,7 +563,13 @@ section::after {
   /* Old browsers */
   background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #ffffff),
+    color-stop(100%, #cccccc)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* Chrome10+,Safari5.1+ */
@@ -748,7 +753,13 @@ header {
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #66cdcc 0%, #336799 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66cdcc), color-stop(100%, #336799));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #66cdcc),
+    color-stop(100%, #336799)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(-45deg, #66cdcc 0%, #336799 100%);
   /* Chrome10+,Safari5.1+ */
@@ -771,7 +782,13 @@ header .navbar-default ul.navbar-nav li a.getApp {
   /* Old browsers */
   background: -moz-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #e0e0e0));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #ffffff),
+    color-stop(100%, #e0e0e0)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(180deg, #ffffff 0%, #e0e0e0 100%);
   /* Chrome10+,Safari5.1+ */
@@ -790,7 +807,13 @@ header .navbar-default ul.navbar-nav li a.getApp:hover {
   /* Old browsers */
   background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #ffffff),
+    color-stop(100%, #cccccc)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* Chrome10+,Safari5.1+ */
@@ -987,7 +1010,13 @@ footer {
   /* Old browsers */
   background: -moz-linear-gradient(-45deg, #66cdcc 0%, #336799 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #66cdcc), color-stop(100%, #336799));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #66cdcc),
+    color-stop(100%, #336799)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(-45deg, #66cdcc 0%, #336799 100%);
   /* Chrome10+,Safari5.1+ */
@@ -1021,7 +1050,7 @@ footer .rights a {
   text-decoration: none;
 }
 .navbar-toggle {
-  background-color: #CCC;
+  background-color: #ccc;
   border: 1px solid rgba(0, 0, 0, 0);
 }
 .btn.btn-primary {
@@ -1047,7 +1076,13 @@ footer .rights a {
   /* Old browsers */
   background: -moz-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #ffffff), color-stop(100%, #cccccc));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    color-stop(0%, #ffffff),
+    color-stop(100%, #cccccc)
+  );
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(180deg, #ffffff 0%, #cccccc 100%);
   /* Chrome10+,Safari5.1+ */
