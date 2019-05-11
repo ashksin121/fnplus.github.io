@@ -1803,3 +1803,31 @@ iframe {
   font-size: 18px;
   margin-top: 30px;
 }
+
+.campus-flow {
+  width: 100%;
+}
+
+.campus-flow-mobile {
+  display: none;
+}
+
+.campus-flow-heading {
+  margin-top: 100px;
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+  .campus-flow {
+    display: none;
+  }
+
+  .campus-flow-mobile {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+}
