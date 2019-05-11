@@ -1820,7 +1820,13 @@ iframe {
 }
 
 .campus-roles-heading {
-  margin: 100px 0 80px 0;
+  margin: 150px 0 80px 0;
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.campus-earn-heading {
+  margin: 70px 0 80px 0;
   font-size: 40px;
   font-weight: 400;
 }
@@ -1835,6 +1841,11 @@ iframe {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
+}
+
+.campus-apply-now-heading {
+  margin: 150px 0 60px 0;
+  font-size: 40px;
 }
 
 @media only screen and (max-width: 768px) {
