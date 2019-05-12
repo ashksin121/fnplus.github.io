@@ -9,47 +9,57 @@
 
 <url>
   <loc>https://www.fnplus.tech/</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/index.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/work</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/work.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/meetup</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/meetup.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/volunteer</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/volunteer.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/sponsors</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/sponsors.html</loc>
-  <lastmod>2019-04-29T15:45:08+00:00</lastmod>
+  <loc>https://www.fnplus.tech/contact</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/about.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/about</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/contact.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/jobs</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fnplus.tech/jobs.html</loc>
-  <lastmod>2019-04-14T05:39:59+00:00</lastmod>
+  <loc>https://www.fnplus.tech/campus</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.fnplus.tech/geeks</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.fnplus.tech/nttf</loc>
+  <lastmod>2019-05-12T12:17:20+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
