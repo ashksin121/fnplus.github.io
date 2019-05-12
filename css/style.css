@@ -1893,7 +1893,11 @@ iframe {
     margin-right: auto;
   }
 
-  .campus-roles-list > li {
-    padding-bottom: 5px;
+  .campus-roles-list {
+    margin-right: 20px;
+  }
+
+  .campus-roles-list li {
+    padding-bottom: 20px;
   }
 }
