@@ -1659,7 +1659,7 @@ canvas {
   transform: translateY(-50%);
 
   z-index: 1000;
-  }
+}
 
 /* Style the icon bar links */
 .icon-bar a {
@@ -1676,55 +1676,55 @@ canvas {
 }
 
 .facebook {
-  background: #3B5998;
+  background: #3b5998;
 }
 
-.instagram{
-background: #C1558B;
+.instagram {
+  background: #c1558b;
 }
 
 .twitter {
-background: #55ACEE;
+  background: #55acee;
 }
 
 .github {
-background: #000;
+  background: #000;
 }
 
 .medium {
-background: #029843;
+  background: #029843;
 }
 
 .linkedin {
-background: #007bb5;
+  background: #007bb5;
 }
 
 .facebook:hover {
-color: #3B5998;
+  color: #3b5998;
 }
 
-.instagram:hover{
-color: #C1558B;
+.instagram:hover {
+  color: #c1558b;
 }
 
 .twitter:hover {
-color: #55ACEE;
+  color: #55acee;
 }
 
 .github:hover {
-color: #000;
+  color: #000;
 }
 
 .medium:hover {
-color: #029843;
+  color: #029843;
 }
 
 .linkedin:hover {
-color: #007bb5;
+  color: #007bb5;
 }
 
-@media screen and (max-width: 768px){
-  .icon-bar{
+@media screen and (max-width: 768px) {
+  .icon-bar {
     right: 50%;
     top: 0;
     display: flex;
@@ -2009,4 +2009,11 @@ iframe {
   .campus-roles-list li {
     padding-bottom: 20px;
   }
+}
+
+/* privacy policy page */
+
+.privacy-policy h1 {
+  font-size: 50px;
+  font-weight: 700;
 }
