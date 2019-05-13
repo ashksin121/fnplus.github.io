@@ -70,25 +70,40 @@
 						<ul>
 							<li class="active"><a href="/">Home</a></li>
 							<li><a href="work">What we do</a></li>
-							<li><a href="meetup">Explore Meetups</a></li>
-							<li><a href="volunteer">Organise a Meetup</a></li>
-							<li><a href="campus">Campus Ambassadors</a></li>
-							<li><a href="sponsors">Sponsors</a></li>
+							<li class="products-link"><a href="#products-content" data-toggle="collapse">Products<i style="margin-left: 20px;"
+								class="icon-circle-down"></i></a></li>
+							<div id="products-content" class="collapse">
+								<li><a href="instify">Instify</a></li>
+								<li><a href="arm">AR-M</a></li>
+							</div>
+
+							<li class="business-link"><a href="#business-content" data-toggle="collapse">Enterprise<i style="margin-left: 20px;"
+								class="icon-circle-down"></i></a></li>
+							<div id="business-content" class="collapse">
+								<li><a href="jobs">Start Hiring</a></li>
+								<li><a href="https://www.geeksgarages.com/">Geeks Garage</a></li>
+							</div>
+							
+							<li class="community-link"><a href="#community-content" data-toggle="collapse">Community<i style="margin-left: 20px;"
+								class="icon-circle-down"></i></a></li>
+							<div id="community-content" class="collapse">
+								<li><a href="meetup">Explore Meetups</a></li>
+								<li><a href="volunteer">Organise a Meetup</a></li>
+								<li><a href="campus">Campus Ambassadors</a></li>
+								<li><a href="jobs">Internships</a></li>
+								<li><a href="sponsors">Sponsors</a></li>
+							</div>
+							
+							<li class="events-link"><a href="#events-content" data-toggle="collapse">Events<i style="margin-left: 20px;"
+								class="icon-circle-down"></i></a></li>
+							<div id="events-content" class="collapse">
+								<li><a href="digisangram">Digi Sangram</a></li>
+							</div>
+							
 							<li><a href="contact">Contact</a></li>
 							<li><a href="about">About</a></li>
 							<li><a href="https://medium.com/fnplus">Blog</a></li>
-							<li class="business-link"><a href="#business-content" data-toggle="collapse">Business<i style="margin-left: 20px;"
-								class="icon-circle-down"></i></a></li>
-							<div id="business-content" class="collapse in">
-								<li><a href="jobs">Jobs</a></li>
-								<li><a href="https://www.geeksgarages.com/">Geeks Garage</a></li>
-								<li class="products-link"><a href="#products-content" data-toggle="collapse">Products<i style="margin-left: 20px;"
-											class="icon-circle-down"></i></a></li>
-								<div id="products-content" class="collapse in">
-									<li><a href="instify">Instify</a></li>
-									<li><a href="arm">AR-M</a></li>
-								</div>
-							</div>
+							<li><button onclick="window.location.href = 'https://home.fnplus.tech'">Start Here</button></li>
 						</ul>
 					</div>
 				</div>
@@ -108,95 +123,6 @@
 		<a href="https://medium.com/fnplus" class="medium"><i class="fa fa-medium"></i></a>
 		<a href="https://www.linkedin.com/company/fnplus/" class="linkedin"><i class="fa fa-linkedin"></i></a>
 	</div>
-
-	<style>
-		/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
-		.icon-bar {
-		position: fixed;
-		top: 50%;
-		-webkit-transform: translateY(-50%);
-		-ms-transform: translateY(-50%);
-		transform: translateY(-50%);
-
-		z-index: 1000;
-		}
-
-		/* Style the icon bar links */
-		.icon-bar a {
-		display: block;
-		text-align: center;
-		padding: 16px;
-		transition: all 0.3s ease;
-		color: white;
-		font-size: 20px;
-		}
-
-		.icon-bar a:hover {
-		background-color: #fff;
-		}
-
-		.facebook {
-		background: #3B5998;
-		}
-
-		.instagram{
-		background: #C1558B;
-		}
-
-		.twitter {
-		background: #55ACEE;
-		}
-
-		.github {
-		background: #000;
-		}
-
-		.medium {
-		background: #029843;
-		}
-
-		.linkedin {
-		background: #007bb5;
-		}
-
-		.facebook:hover {
-		color: #3B5998;
-		}
-
-		.instagram:hover{
-		color: #C1558B;
-		}
-
-		.twitter:hover {
-		color: #55ACEE;
-		}
-
-		.github:hover {
-		color: #000;
-		}
-
-		.medium:hover {
-		color: #029843;
-		}
-
-		.linkedin:hover {
-		color: #007bb5;
-		}
-
-		@media screen and (max-width: 768px){
-			.icon-bar{
-				right: 50%;
-				top: 0;
-				display: flex;
-				margin: 0;
-				padding: 0;
-				-webkit-transform: translateX(50%);
-				-ms-transform: translateX(50%);
-				transform: translateX(50%);
-			}
-		}
-
-	</style>
 
 	<div id="colorlib-page">
 		<header>
