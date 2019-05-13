@@ -140,12 +140,12 @@
       function() {
         $(this)
           .find(".nav-hoverable-content")
-          .addClass("in");
+          .collapse("show");
       },
       function() {
         $(this)
           .find(".nav-hoverable-content")
-          .removeClass("in");
+          .collapse("hide");
       }
     );
   }
