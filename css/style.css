@@ -2013,7 +2013,20 @@ iframe {
 
 /* privacy policy page */
 
+.privacy-policy {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.privacy-policy h4 {
+  color: black;
+}
+
 .privacy-policy h1 {
   font-size: 50px;
   font-weight: 700;
+}
+
+.footer-disclaimer {
+  font-size: 14px;
+  margin-top: 20px;
 }
