@@ -1,157 +1,165 @@
-;(function () {
+(function() {
+  "use strict";
 
-	'use strict';
+  // iPad and iPod detection
+  var isiPad = function() {
+    return navigator.platform.indexOf("iPad") != -1;
+  };
 
+  var isiPhone = function() {
+    return (
+      navigator.platform.indexOf("iPhone") != -1 ||
+      navigator.platform.indexOf("iPod") != -1
+    );
+  };
 
+  var fullHeight = function() {
+    $(".js-fullheight").css("height", $(window).height());
+    $(window).resize(function() {
+      $(".js-fullheight").css("height", $(window).height());
+    });
+  };
 
-	// iPad and iPod detection
-	var isiPad = function(){
-		return (navigator.platform.indexOf("iPad") != -1);
-	};
+  var burgerMenu = function() {
+    $(".js-colorlib-nav-toggle").on("click", function(event) {
+      event.preventDefault();
+      var $this = $(this);
+      if ($("body").hasClass("menu-show")) {
+        $("body").removeClass("menu-show");
+        $("#colorlib-main-nav > .js-colorlib-nav-toggle").removeClass("show");
+      } else {
+        $("body").addClass("menu-show");
+        setTimeout(function() {
+          $("#colorlib-main-nav > .js-colorlib-nav-toggle").addClass("show");
+        }, 900);
+      }
+    });
+  };
 
-	var isiPhone = function(){
-	    return (
-			(navigator.platform.indexOf("iPhone") != -1) ||
-			(navigator.platform.indexOf("iPod") != -1)
-	    );
-	};
+  // Animations
 
+  var contentWayPoint = function() {
+    var i = 0;
+    $(".animate-box").waypoint(
+      function(direction) {
+        if (direction === "down" && !$(this.element).hasClass("animated")) {
+          i++;
 
-	var fullHeight = function() {
+          $(this.element).addClass("item-animate");
+          setTimeout(function() {
+            $("body .animate-box.item-animate").each(function(k) {
+              var el = $(this);
+              setTimeout(
+                function() {
+                  var effect = el.data("animate-effect");
+                  if (effect === "fadeIn") {
+                    el.addClass("fadeIn animated");
+                  } else {
+                    el.addClass("fadeInUp animated");
+                  }
 
-		$('.js-fullheight').css('height', $(window).height());
-		$(window).resize(function(){
-			$('.js-fullheight').css('height', $(window).height());
-		});
+                  el.removeClass("item-animate");
+                },
+                k * 200,
+                "easeInOutExpo"
+              );
+            });
+          }, 100);
+        }
+      },
+      { offset: "85%" }
+    );
+  };
 
-	};
+  var counter = function() {
+    $(".js-counter").countTo({
+      formatter: function(value, options) {
+        return value.toFixed(options.decimals);
+      }
+    });
+  };
 
-	var burgerMenu = function() {
+  var counterWayPoint = function() {
+    if ($("#colorlib-counter").length > 0) {
+      $("#colorlib-counter").waypoint(
+        function(direction) {
+          if (direction === "down" && !$(this.element).hasClass("animated")) {
+            setTimeout(counter, 400);
+            $(this.element).addClass("animated");
+          }
+        },
+        { offset: "90%" }
+      );
+    }
+  };
 
-		$('.js-colorlib-nav-toggle').on('click', function(event) {
-			event.preventDefault();
-			var $this = $(this);
-			if( $('body').hasClass('menu-show') ) {
-				$('body').removeClass('menu-show');
-				$('#colorlib-main-nav > .js-colorlib-nav-toggle').removeClass('show');
-			} else {
-				$('body').addClass('menu-show');
-				setTimeout(function(){
-					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-				}, 900);
-			}
-		})
-	};
+  // Owl Carousel
+  var owlCarouselFeatureSlide = function() {
+    var owl2 = $(".owl-carousel");
+    owl2.owlCarousel({
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      autoplay: true,
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoHeight: true,
+      mouseDrag: false,
+      autoplayHoverPause: true,
+      items: 1,
+      navText: [
+        "<i class='icon-arrow-left3 owl-direction'></i>",
+        "<i class='icon-arrow-right3 owl-direction'></i>"
+      ]
+    });
+    var owl3 = $(".owl-carousel3");
+    owl3.owlCarousel({
+      animateOut: "fadeOut",
+      animateIn: "fadeIn",
+      autoplay: true,
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      autoHeight: true,
+      mouseDrag: false,
+      autoplayHoverPause: true,
+      items: 1,
+      navText: [
+        "<i class='icon-arrow-left3 owl-direction'></i>",
+        "<i class='icon-arrow-right3 owl-direction'></i>"
+      ]
+    });
+  };
 
-	// Animations
+  // Hover animation for Nav Bar
 
-	var contentWayPoint = function() {
-		var i = 0;
-		$('.animate-box').waypoint( function( direction ) {
+  function navHover() {
+    $(".nav-hoverable").hover(
+      function() {
+        $(this)
+          .find(".nav-hoverable-content")
+          .addClass("in");
+      },
+      function() {
+        $(this)
+          .find(".nav-hoverable-content")
+          .removeClass("in");
+      }
+    );
+  }
 
-			if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-				i++;
-
-				$(this.element).addClass('item-animate');
-				setTimeout(function(){
-
-					$('body .animate-box.item-animate').each(function(k){
-						var el = $(this);
-						setTimeout( function () {
-							var effect = el.data('animate-effect');
-							if ( effect === 'fadeIn') {
-								el.addClass('fadeIn animated');
-							} else {
-								el.addClass('fadeInUp animated');
-							}
-
-							el.removeClass('item-animate');
-						},  k * 200, 'easeInOutExpo' );
-					});
-
-				}, 100);
-
-			}
-
-		} , { offset: '85%' } );
-	};
-
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
-	};
-
-	var counterWayPoint = function() {
-		if ($('#colorlib-counter').length > 0 ) {
-			$('#colorlib-counter').waypoint( function( direction ) {
-
-				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 400);
-					$(this.element).addClass('animated');
-				}
-			} , { offset: '90%' } );
-		}
-	};
-
-	// Owl Carousel
-	var owlCarouselFeatureSlide = function() {
-		var owl2 = $('.owl-carousel');
-		owl2.owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-		   autoplay: true,
-		   loop:true,
-		   margin:0,
-		   nav: true,
-		   dots: false,
-		   autoHeight: true,
-		   mouseDrag: false,
-		   autoplayHoverPause: true,
-		   items: 1,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		});
-		var owl3 = $('.owl-carousel3');
-		owl3.owlCarousel({
-			animateOut: 'fadeOut',
-		   animateIn: 'fadeIn',
-		   autoplay: true,
-		   loop:true,
-		   margin:0,
-		   nav: false,
-		   dots: true,
-		   autoHeight: true,
-		   mouseDrag: false,
-		   autoplayHoverPause: true,
-		   items: 1,
-		   navText: [
-		      "<i class='icon-arrow-left3 owl-direction'></i>",
-		      "<i class='icon-arrow-right3 owl-direction'></i>"
-	     	]
-		});
-	};
-
-
-
-
-	// Document on load.
-	$(function(){
-		fullHeight();
-		burgerMenu();
-		// counterWayPoint();
-		contentWayPoint();
-		owlCarouselFeatureSlide();
-	});
-
-
-}());
+  // Document on load.
+  $(function() {
+    fullHeight();
+    burgerMenu();
+    // counterWayPoint();
+    contentWayPoint();
+    owlCarouselFeatureSlide();
+    navHover();
+  });
+})();
 
 var utils = {
   norm: function(value, min, max) {
@@ -163,7 +171,11 @@ var utils = {
   },
 
   map: function(value, sourceMin, sourceMax, destMin, destMax) {
-    return utils.lerp(utils.norm(value, sourceMin, sourceMax), destMin, destMax);
+    return utils.lerp(
+      utils.norm(value, sourceMin, sourceMax),
+      destMin,
+      destMax
+    );
   },
 
   clamp: function(value, min, max) {
@@ -191,8 +203,10 @@ var utils = {
   },
 
   pointInRect: function(x, y, rect) {
-    return utils.inRange(x, rect.x, rect.x + rect.radius) &&
-      utils.inRange(y, rect.y, rect.y + rect.radius);
+    return (
+      utils.inRange(x, rect.x, rect.x + rect.radius) &&
+      utils.inRange(y, rect.y, rect.y + rect.radius)
+    );
   },
 
   inRange: function(value, min, max) {
@@ -200,21 +214,25 @@ var utils = {
   },
 
   rangeIntersect: function(min0, max0, min1, max1) {
-    return Math.max(min0, max0) >= Math.min(min1, max1) &&
-      Math.min(min0, max0) <= Math.max(min1, max1);
+    return (
+      Math.max(min0, max0) >= Math.min(min1, max1) &&
+      Math.min(min0, max0) <= Math.max(min1, max1)
+    );
   },
 
   rectIntersect: function(r0, r1) {
-    return utils.rangeIntersect(r0.x, r0.x + r0.width, r1.x, r1.x + r1.width) &&
-      utils.rangeIntersect(r0.y, r0.y + r0.height, r1.y, r1.y + r1.height);
+    return (
+      utils.rangeIntersect(r0.x, r0.x + r0.width, r1.x, r1.x + r1.width) &&
+      utils.rangeIntersect(r0.y, r0.y + r0.height, r1.y, r1.y + r1.height)
+    );
   },
 
   degreesToRads: function(degrees) {
-    return degrees / 180 * Math.PI;
+    return (degrees / 180) * Math.PI;
   },
 
   radsToDegrees: function(radians) {
-    return radians * 180 / Math.PI;
+    return (radians * 180) / Math.PI;
   },
 
   randomRange: function(min, max) {
@@ -249,14 +267,13 @@ var utils = {
 
   inpercentH: function(size) {
     return (size * H) / 100;
-  },
-
-}
+  }
+};
 
 // basic setup  :)
 
 canvas = document.getElementById("canvas");
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 W = canvas.width = window.innerWidth;
 H = canvas.height = window.innerHeight;
 
@@ -271,7 +288,6 @@ function shape(x, y, texte) {
   this.text = texte;
   this.placement = [];
   this.vectors = [];
-
 }
 
 shape.prototype.getValue = function() {
@@ -283,30 +299,24 @@ shape.prototype.getValue = function() {
   ctx.font = "bold " + this.size + "px arial";
   ctx.fillText(this.text, this.x, this.y);
 
-
   var idata = ctx.getImageData(0, 0, W, H);
 
   var buffer32 = new Uint32Array(idata.data.buffer);
 
   for (var y = 0; y < H; y += gridY) {
     for (var x = 0; x < W; x += gridX) {
-
       if (buffer32[y * W + x]) {
         this.placement.push(new particle(x, y));
       }
     }
   }
   ctx.clearRect(0, 0, W, H);
-
-}
-colors = [
-  '#1c6275','#44baaa','black','lime'
-];
+};
+colors = ["#1c6275", "#44baaa", "black", "lime"];
 
 function particle(x, y, type) {
   this.radius = 1.1;
-  this.futurRadius = utils.randomInt(radius, radius+3);
-
+  this.futurRadius = utils.randomInt(radius, radius + 3);
 
   this.rebond = utils.randomInt(1, 5);
   this.x = x;
@@ -314,12 +324,12 @@ function particle(x, y, type) {
 
   this.dying = false;
 
-  this.base = [x, y]
+  this.base = [x, y];
 
   this.vx = 0;
   this.vy = 0;
   this.type = type;
-  this.friction = .99;
+  this.friction = 0.99;
   this.gravity = gravity;
   this.color = colors[Math.floor(Math.random() * colors.length)];
 
@@ -345,7 +355,6 @@ function particle(x, y, type) {
 
   this.angleTo = function(p2) {
     return Math.atan2(p2.y - this.y, p2.x - this.x);
-
   };
 
   this.update = function(heading) {
@@ -356,18 +365,15 @@ function particle(x, y, type) {
     this.vx *= this.friction;
     this.vy *= this.friction;
 
-    if(this.radius < this.futurRadius && this.dying === false){
+    if (this.radius < this.futurRadius && this.dying === false) {
       this.radius += duration;
-    }else{
+    } else {
       this.dying = true;
     }
 
-    if(this.dying === true){
+    if (this.dying === true) {
       this.radius -= duration;
-
-
     }
-
 
     ctx.beginPath();
 
@@ -383,15 +389,17 @@ function particle(x, y, type) {
       this.y = this.base[1];
       this.radius = 1.1;
       this.setSpeed(speed);
-  this.futurRadius = utils.randomInt(radius, radius+3);
-      this.setHeading(utils.randomInt(utils.degreesToRads(0), utils.degreesToRads(360)));
+      this.futurRadius = utils.randomInt(radius, radius + 3);
+      this.setHeading(
+        utils.randomInt(utils.degreesToRads(0), utils.degreesToRads(360))
+      );
     }
-
   };
 
-  this.setSpeed(utils.randomInt(.1, .5));
-  this.setHeading(utils.randomInt(utils.degreesToRads(0), utils.degreesToRads(360)));
-
+  this.setSpeed(utils.randomInt(0.1, 0.5));
+  this.setHeading(
+    utils.randomInt(utils.degreesToRads(0), utils.degreesToRads(360))
+  );
 }
 element2 = 0;
 element3 = 0.3;
@@ -401,7 +409,7 @@ element6 = 0.3;
 
 fieldvalue = "Fnplus";
 gravity = 0;
-duration =  0.1;
+duration = 0.1;
 resolution = 0.1;
 speed = 0.1;
 radius = 0.3;
@@ -422,19 +430,17 @@ function change() {
   message.getValue();
 }
 
-
 function changeV() {
-    gravity = parseFloat(element2);
-    duration =  parseFloat(element3);
-    speed = parseFloat(element5);
-    radius = parseFloat(element6);
+  gravity = parseFloat(element2);
+  duration = parseFloat(element3);
+  speed = parseFloat(element5);
+  radius = parseFloat(element6);
 }
 
 var fps = 100;
 function update() {
   setTimeout(function() {
     ctx.clearRect(0, 0, W, H);
-
 
     for (var i = 0; i < message.placement.length; i++) {
       message.placement[i].update();
