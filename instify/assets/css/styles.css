@@ -1137,3 +1137,12 @@ form .form-control:focus {
 .pre-loader {
   background: #336799;
 }
+
+.special-mentions-container p {
+  font-weight: 700;
+  color: #000 !important;
+}
+
+.special-mentions-container h4 {
+  color: #fff;
+}
