@@ -11,7 +11,6 @@
     <meta name="author" content="" />
 
     <!-- Tags for rich preview -->
-
     <meta property="og:title" content="Fnplus Tech | Exploring the power of Communities" />
     <meta property="og:description"
         content="We connect geeks and new perspectives to promote diversity, innovation & passion." />
@@ -29,6 +28,17 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PWB8BQV');</script>
+    <!-- End Google Tag Manager -->
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Montserrat:400,700" rel="stylesheet">
 
@@ -51,12 +61,11 @@
     <script src="js/modernizr-2.6.2.min.js"></script>
 
     <style>
-
         * {
             box-sizing: border-box;
         }
 
-        .modal-header{
+        .modal-header {
             position: absolute;
             right: 10px;
             top: 10px;
@@ -133,13 +142,19 @@
             color: white;
         }
 
-        p, span{
+        p,
+        span {
             color: #000;
         }
     </style>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWB8BQV" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <nav id="colorlib-main-nav" role="navigation">
         <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
         <div class="js-fullheight colorlib-table">
@@ -154,8 +169,8 @@
 
                             <div class="nav-hoverable">
                                 <li class="products-link">
-                                    <a href="#products-content" data-toggle="collapse">Products<i style="margin-left: 20px;"
-                                            class="icon-circle-down"></i></a>
+                                    <a href="#products-content" data-toggle="collapse">Products<i
+                                            style="margin-left: 20px;" class="icon-circle-down"></i></a>
                                 </li>
 
                                 <div id="products-content" class="nav-hoverable-content collapse">
@@ -168,8 +183,8 @@
 
                             <div class="nav-hoverable">
                                 <li class="business-link">
-                                    <a href="#business-content" data-toggle="collapse">Startups / Enterprise<i style="margin-left: 20px;"
-                                            class="icon-circle-down"></i></a>
+                                    <a href="#business-content" data-toggle="collapse">Startups / Enterprise<i
+                                            style="margin-left: 20px;" class="icon-circle-down"></i></a>
                                 </li>
 
                                 <div id="business-content" class="nav-hoverable-content collapse">
@@ -184,8 +199,8 @@
 
                             <div class="nav-hoverable">
                                 <li class="community-link">
-                                    <a href="#community-content" data-toggle="collapse">Community<i style="margin-left: 20px;"
-                                            class="icon-circle-down"></i></a>
+                                    <a href="#community-content" data-toggle="collapse">Community<i
+                                            style="margin-left: 20px;" class="icon-circle-down"></i></a>
                                 </li>
 
                                 <div id="community-content" class="nav-hoverable-content collapse">
@@ -213,7 +228,7 @@
                             <li><a href="contact">Contact</a></li>
                             <li><a href="about">About</a></li>
                             <li><a href="https://medium.com/fnplus">Blog</a></li>
-                                  </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -241,23 +256,30 @@
                 </div>
                 <div class="col-md-6 col-pb-sm" style="margin-top: 40px;">
                     <h2 class="job-heading">Jobs</h2>
-                    <h4 class="job-heading-details">Not able to find right candidate with proven skills for your startup/company in the crowd of engineers with no skills? Fret not, Connect directly with exclusively curated geeks of Fnplus community & forget about your worries about finding skilled candidates again.</h4>
-                     <div class="job-register"><button class="btn-view job-btn job-register-btn" id="myBtn">Register your company</button></div>
-                    <br/>
+                    <h4 class="job-heading-details">Not able to find right candidate with proven skills for your
+                        startup/company in the crowd of engineers with no skills? Fret not, Connect directly with
+                        exclusively curated geeks of Fnplus community & forget about your worries about finding skilled
+                        candidates again.</h4>
+                    <div class="job-register"><button class="btn-view job-btn job-register-btn" id="myBtn">Register your
+                            company</button></div>
+                    <br />
 
                     <div class="job-post text-center">
-                    <div>Already registered? Start posting</div><i class="job-register-arrow icon-arrow-down2"></i><br/>
-                    <button class="btn-view job-btn" id="myBtn2">Post a job</button>
+                        <div>Already registered? Start posting</div><i
+                            class="job-register-arrow icon-arrow-down2"></i><br />
+                        <button class="btn-view job-btn" id="myBtn2">Post a job</button>
                     </div>
                 </div>
                 <!-- modal for organise jam form -->
                 <div id="myModal" class="modal">
                     <!-- Modal for company -->
                     <div class="modal-content">
-                            <i class="modal-header close-modal icon-cross"></i>
+                        <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
-                            <iframe class="airtable-embed" src="https://airtable.com/embed/shrYYsp56Ymu6LP6M?backgroundColor=red"
-                                frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                            <iframe class="airtable-embed"
+                                src="https://airtable.com/embed/shrYYsp56Ymu6LP6M?backgroundColor=red" frameborder="0"
+                                onmousewheel="" width="100%" height="533"
+                                style="background: transparent; border: 1px solid #ccc;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -267,8 +289,10 @@
                     <div class="modal-content">
                         <i class="modal-header close-modal icon-cross"></i>
                         <div class="modal-body">
-                            <iframe class="airtable-embed" src="https://airtable.com/embed/shrgKRFKrWpend65f?backgroundColor=red"
-                                frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+                            <iframe class="airtable-embed"
+                                src="https://airtable.com/embed/shrgKRFKrWpend65f?backgroundColor=red" frameborder="0"
+                                onmousewheel="" width="100%" height="533"
+                                style="background: transparent; border: 1px solid #ccc;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -278,8 +302,10 @@
         <div>
             <h1 class="job-available">Available Opportunities</h1>
         </div>
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrivghziFeqy8XuD?backgroundColor=red&viewControls=on"
-            frameborder="1" onmousewheel="" width="95%" style="border: 2px solid black;height:100vh;display:block;margin: auto;"></iframe>
+        <iframe class="airtable-embed"
+            src="https://airtable.com/embed/shrivghziFeqy8XuD?backgroundColor=red&viewControls=on" frameborder="1"
+            onmousewheel="" width="95%"
+            style="border: 2px solid black;height:100vh;display:block;margin: auto;"></iframe>
         <!-- Meetup airtable -->
     </div>
 
@@ -302,7 +328,8 @@
                             <a href="https://twitter.com/fnplusofficial"><i class="icon-twitter"></i></a>
                             <a href="https://instagram.com/fnplusofficial"><i class="icon-instagram"></i></a>
                             <a href="https://github.com/fnplus"><i class="icon-github"></i></a>
-                            <a href="https://www.youtube.com/channel/UCP9sGE-eMnDBbEdNs_BnCIQ"><i class="icon-youtube"></i></a>
+                            <a href="https://www.youtube.com/channel/UCP9sGE-eMnDBbEdNs_BnCIQ"><i
+                                    class="icon-youtube"></i></a>
                             <a href="https://medium.com/fnplus"><i class="icon-medium"></i></a>
                             <a href="https://www.linkedin.com/company/fnplus/"><i class="icon-linkedin"></i></a>
                         </p>
@@ -366,7 +393,7 @@
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
-            if (event.target == modal || event.target == modal2 ) {
+            if (event.target == modal || event.target == modal2) {
                 modal.style.display = "none";
                 modal2.style.display = "none";
             }
@@ -388,7 +415,6 @@
 
     <!-- Main JS (Do not remove) -->
     <script src="js/main.js"></script>
-
 </body>
 
 </html>
