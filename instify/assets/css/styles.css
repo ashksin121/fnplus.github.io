@@ -1149,7 +1149,23 @@ form .form-control:focus {
 
 /* Fix for slide mobile friendliness  */
 
+.slide1-mobile {
+  display: none;
+}
+
+.slide2-mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
+  .slide1-mobile {
+    display: block;
+  }
+
+  .slide2-mobile {
+    display: block;
+  }
+
   .slide1-desktop {
     display: none;
   }
