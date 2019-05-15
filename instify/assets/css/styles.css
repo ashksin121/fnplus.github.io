@@ -1146,3 +1146,38 @@ form .form-control:focus {
 .special-mentions-container h4 {
   color: #fff;
 }
+
+/* Fix for slide mobile friendliness  */
+
+@media only screen and (max-width: 768px) {
+  .slide1-desktop {
+    display: none;
+  }
+
+  .slide2-desktop {
+    display: none;
+  }
+
+  .slide1-image {
+    position: absolute;
+    bottom: 0 !important;
+    width: 100% !important;
+  }
+
+  .slide1-heading {
+    font-family: "Lato", Arial;
+    font-size: 500%;
+    text-align: center;
+    color: #fff;
+  }
+
+  .slide1-heading span {
+    font-size: 200%;
+    text-align: left !important;
+    color: #fff;
+  }
+
+  .slide1-btns {
+    margin-top: 20px;
+  }
+}
