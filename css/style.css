@@ -2144,3 +2144,9 @@ iframe {
     margin-top: 16em;
   }
 }
+
+/* Hire page styles */
+
+.hire-jumbotron {
+  height: 100vh;
+}
