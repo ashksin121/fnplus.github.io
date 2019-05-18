@@ -2149,4 +2149,12 @@ iframe {
 
 .hire-jumbotron {
   height: 100vh;
+  background: url(/images/hire-background.png) no-repeat;
+  background-size: 70%;
+  background-position: center right;
+}
+
+.hire-jumbotron img {
+  height: 100%;
+  float: right;
 }
