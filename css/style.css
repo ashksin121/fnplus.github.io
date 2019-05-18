@@ -2158,3 +2158,17 @@ iframe {
   height: 100%;
   float: right;
 }
+
+.hire-jumbotron-text-container {
+  margin-top: 150px;
+  padding: 20px;
+}
+
+.hire-jumbotron-text-container h1 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.hire-jumbotron-text-container p {
+  text-align: justify;
+}
