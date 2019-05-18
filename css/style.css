@@ -2179,7 +2179,7 @@ iframe {
 .hire-section-1 h1 {
   font-size: 40px;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 80px;
   text-align: center;
 }
 
@@ -2197,6 +2197,33 @@ iframe {
   align-items: center;
 }
 
+.hire-section-1 .section-card h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+
 .hire-section-1 .section-card p {
   text-align: justify;
+}
+
+.hire-section-2 {
+  height: 100vh;
+  background: url(/images/hire-background2.png) no-repeat;
+  background-size: 65%;
+  background-position: left top;
+  margin-top: 30px;
+}
+
+.hire-section-2 h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.hire-section-2-img {
+  height: 100%;
+  float: left;
+}
+
+.hire-section-2 .text-container {
+  margin-top: 50px;
 }
