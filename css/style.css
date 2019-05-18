@@ -2158,7 +2158,6 @@ iframe {
   height: 100%;
   float: right;
 }
-
 .hire-jumbotron-text-container {
   margin-top: 150px;
   padding: 20px;
@@ -2166,9 +2165,38 @@ iframe {
 
 .hire-jumbotron-text-container h1 {
   font-weight: 700;
-  font-size: 45px;
+  font-size: 50px;
 }
 
 .hire-jumbotron-text-container p {
+  text-align: justify;
+}
+
+.hire-section-1 {
+  margin-top: 30px;
+}
+
+.hire-section-1 h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.hire-section-1 > p {
+  text-align: center;
+}
+
+.hire-section-1 .row img {
+  width: 100%;
+}
+
+.hire-section-1 .section-card {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
+
+.hire-section-1 .section-card p {
   text-align: justify;
 }
