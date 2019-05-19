@@ -2170,6 +2170,7 @@ iframe {
 
 .hire-jumbotron-text-container p {
   text-align: justify;
+  font-size: 18px;
 }
 
 .hire-section-1 {
@@ -2183,7 +2184,7 @@ iframe {
   text-align: center;
 }
 
-.hire-section-1 > p {
+.hire-section-1-sub-heading {
   text-align: center;
 }
 
@@ -2226,4 +2227,14 @@ iframe {
 
 .hire-section-2 .text-container {
   margin-top: 50px;
+}
+
+.hire-section-2-list h5 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 0px !important;
+}
+
+.hire-section-2-subheading {
+  font-size: 18px;
 }
