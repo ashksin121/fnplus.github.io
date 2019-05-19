@@ -2210,7 +2210,7 @@ iframe {
   height: 100vh;
   background: url(/images/hire-background2.png) no-repeat;
   background-size: 65%;
-  background-position: left top;
+  background-position: right top;
   margin-top: 30px;
 }
 
@@ -2221,7 +2221,7 @@ iframe {
 
 .hire-section-2-img {
   height: 100%;
-  float: left;
+  float: right;
 }
 
 .hire-section-2 .text-container {
