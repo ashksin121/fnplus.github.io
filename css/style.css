@@ -2319,10 +2319,10 @@ iframe {
 
 .rle-section-1 {
   height: 100vh;
-  background: url(/images/rle-background1-temp.png);
-  background-size: cover;
+  background: url(/images/rle-background1.png);
+  background-size: 100% 100%;
   background-position: center center;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 .rle-section-1-heading {
@@ -2348,4 +2348,17 @@ iframe {
 
 .rle-section-2 {
   height: 100vh;
+  background: url(/images/rle-background2.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  padding-top: 50px;
+}
+
+.rle-section-2-gears {
+  margin-top: 30px;
+}
+
+.rle-section-2-gears h1 {
+  font-size: 45px;
+  font-weight: 700;
 }
