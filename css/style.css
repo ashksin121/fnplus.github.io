@@ -2364,15 +2364,19 @@ iframe {
 }
 
 .rle-section-2-cards {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 
 .rle-card {
-  background-color: #8effb4;
+  background: #8effb4;
   height: 200px;
   padding: 20px 30px;
-  box-shadow: 3px 3px 4px 0px black;
+  /* box-shadow: 3px 3px 4px 0px black; */
 }
+
+/* .rle-card:hover{
+  box-shadow: 3px 3px 4px 0px black;
+} */
 
 .rle-card .card-title {
   text-align: center;
@@ -2382,4 +2386,36 @@ iframe {
 .rle-card .card-text {
   text-align: justify;
   color: #333333;
+}
+
+.rle-section-3 {
+  height: 100vh;
+}
+
+.rle-3-card {
+  height: 500px;
+  position: relative;
+}
+
+.rle-3-card-school {
+  background: url(/images/rle-school.png);
+  background-size: cover;
+  background-position: center center;
+}
+
+.rle-3-card .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  padding: 10px 20px;
+}
+
+.rle-3-card .card-body h3 {
+  margin-bottom: 10px !important;
+  text-align: center;
+}
+
+.rle-3-card .card-body p {
+  text-align: justify;
 }
