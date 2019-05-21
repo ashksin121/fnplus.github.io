@@ -2393,12 +2393,20 @@ iframe {
 }
 
 .rle-3-card {
-  height: 500px;
+  height: 450px;
   position: relative;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .rle-3-card-school {
-  background: url(/images/rle-school.png);
+  /* background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%); */
+  background-image: linear-gradient(
+      135deg,
+      rgba(206, 159, 252, 0.5),
+      rgba(115, 103, 240, 0.8)
+    ),
+    url(/images/rle-school.png);
   background-size: cover;
   background-position: center center;
 }
@@ -2414,8 +2422,12 @@ iframe {
 .rle-3-card .card-body h3 {
   margin-bottom: 10px !important;
   text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
 }
 
 .rle-3-card .card-body p {
   text-align: justify;
+  color: #fff;
 }
