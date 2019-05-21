@@ -2397,18 +2397,35 @@ iframe {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  background-size: cover;
+  background-position: center center;
 }
 
 .rle-3-card-school {
-  /* background-image: linear-gradient(147deg, #fe8a39 0%, #fd3838 74%); */
   background-image: linear-gradient(
       135deg,
-      rgba(206, 159, 252, 0.5),
-      rgba(115, 103, 240, 0.8)
+      rgba(206, 159, 252, 0.7),
+      rgba(115, 103, 240, 0.7)
     ),
     url(/images/rle-school.png);
-  background-size: cover;
-  background-position: center center;
+}
+
+.rle-3-card-institute {
+  background-image: linear-gradient(
+      135deg,
+      rgba(242, 213, 15, 0.7),
+      rgba(218, 6, 65, 0.7)
+    ),
+    url(/images/rle-institute.jpg);
+}
+
+.rle-3-card-organisation {
+  background-image: linear-gradient(
+      135deg,
+      rgba(195, 236, 82, 0.7),
+      rgba(11, 162, 157, 0.7)
+    ),
+    url(/images/rle-organisation.jpg);
 }
 
 .rle-3-card .card-body {
