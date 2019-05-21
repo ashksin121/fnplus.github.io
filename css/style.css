@@ -2314,3 +2314,38 @@ iframe {
     margin-top: 30px;
   }
 }
+
+/* RLE Description  */
+
+.rle-section-1 {
+  height: 100vh;
+  background: url(/images/rle-background1-temp.png);
+  background-size: cover;
+  background-position: center center;
+  padding-top: 50px;
+}
+
+.rle-section-1-heading {
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.rle-section-1-subheading {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.rle-section-1-description {
+  padding: 0;
+  margin-top: 30px;
+}
+
+.rle-section-1-description h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rle-section-2 {
+  height: 100vh;
+}
