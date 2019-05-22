@@ -2062,7 +2062,7 @@ iframe {
 
 .hire-jumbotron {
   height: 100vh;
-  background: url(/images/hire-background.png) no-repeat;
+  background: url(/images/hire/hire-background.png) no-repeat;
   background-size: cover;
   background-position: center right;
 }
@@ -2124,7 +2124,7 @@ iframe {
 
 .hire-section-2 {
   height: 100vh;
-  background: url(/images/hire-background2.png) no-repeat;
+  background: url(/images/hire/hire-background2.png) no-repeat;
   background-size: cover;
   background-position: right top;
   margin-top: 30px;
