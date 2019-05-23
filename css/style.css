@@ -2399,3 +2399,65 @@ iframe {
 .rle-card-know-more a:focus {
   text-decoration: none;
 }
+
+.rle-section-1-mobile-img1 {
+  display: none;
+}
+
+.rle-section-1-mobile-img2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .rle-section-1 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-2 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-3 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-1-heading {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .rle-section-1-subheading {
+    font-size: 20px;
+  }
+
+  .rle-section-1-mobile-img1 {
+    display: block;
+    width: 100%;
+  }
+
+  .rle-section-2-gears h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  .rle-section-2-gears h3 {
+    font-size: 20px;
+  }
+
+  .rle-section-1-mobile-img2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .rle-section-2-cards {
+    margin-top: 80px;
+  }
+
+  .rle-card {
+    margin-bottom: 30px;
+  }
+}
