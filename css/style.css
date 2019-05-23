@@ -2450,7 +2450,7 @@ iframe {
   .rle-section-1-mobile-img2 {
     display: block;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   .rle-section-2-cards {
@@ -2459,5 +2459,23 @@ iframe {
 
   .rle-card {
     margin-bottom: 30px;
+  }
+
+  .rle-section-3-heading {
+    font-size: 40px;
+    text-align: left;
+    margin-top: 60px;
+  }
+
+  .rle-section-3-subheading {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  .rle-3-card {
+    margin-bottom: 50px;
   }
 }
