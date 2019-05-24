@@ -2313,4 +2313,254 @@ iframe {
   .hire-section-2-subheading {
     margin-top: 30px;
   }
+  /* RLE Description  */
+
+.rle-section-1 {
+  height: 100vh;
+  background: url(/images/index/rle-background1.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  padding-top: 30px;
+}
+
+.rle-section-1-heading {
+  margin-top: 100px;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.rle-section-1-subheading {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.rle-section-1-description {
+  padding: 0;
+  margin-top: 30px;
+}
+
+.rle-section-1-description h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.rle-section-2 {
+  height: 100vh;
+  background: url(/images/index/rle-background2.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  padding-top: 50px;
+}
+
+.rle-section-2-gears {
+  margin-top: 10px;
+}
+
+.rle-section-2-gears h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.rle-section-2-cards {
+  margin-top: 120px;
+}
+
+.rle-card {
+  background: #8effb4;
+  height: 200px;
+  padding: 20px 30px;
+  /* box-shadow: 3px 3px 4px 0px black; */
+}
+
+/* .rle-card:hover{
+  box-shadow: 3px 3px 4px 0px black;
+} */
+
+.rle-card .card-title {
+  text-align: center;
+  font-weight: 500;
+}
+
+.rle-card .card-text {
+  text-align: justify;
+  color: #333333;
+}
+
+.rle-section-3 {
+  height: 100vh;
+  background: url(/images/index/rle-background3.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  padding-top: 30px;
+}
+
+.rle-3-card {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.rle-3-card-school {
+  background-image: linear-gradient(
+      135deg,
+      rgba(206, 159, 252, 0.7),
+      rgba(115, 103, 240, 0.7)
+    ),
+    url(/images/index/rle-school.png);
+}
+
+.rle-3-card-institute {
+  background-image: linear-gradient(
+      135deg,
+      rgba(242, 213, 15, 0.7),
+      rgba(218, 6, 65, 0.7)
+    ),
+    url(/images/index/rle-institute.jpg);
+}
+
+.rle-3-card-organisation {
+  background-image: linear-gradient(
+      135deg,
+      rgba(195, 236, 82, 0.7),
+      rgba(11, 162, 157, 0.7)
+    ),
+    url(/images/index/rle-organisation.jpg);
+}
+
+.rle-3-card .card-body {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 20px;
+  padding-bottom: 30px;
+}
+
+.rle-3-card .card-body h3 {
+  margin-bottom: 10px !important;
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.rle-3-card .card-body p {
+  text-align: justify;
+  color: #fff;
+}
+
+.rle-section-3-heading {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 5px !important;
+}
+
+.rle-section-3-subheading {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 22px;
+}
+
+.rle-card-know-more {
+  width: 150px;
+  margin: 0 auto;
+  background: #029843;
+  padding: 5px 10px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.rle-card-know-more a {
+  color: white;
+}
+
+.rle-card-know-more a:hover {
+  text-decoration: none;
+}
+
+.rle-card-know-more a:focus {
+  text-decoration: none;
+}
+
+.rle-section-1-mobile-img1 {
+  display: none;
+}
+
+.rle-section-1-mobile-img2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .rle-section-1 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-2 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-3 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-1-heading {
+    margin-top: 20px;
+    font-size: 40px;
+  }
+
+  .rle-section-1-subheading {
+    font-size: 20px;
+  }
+
+  .rle-section-1-mobile-img1 {
+    display: block;
+    width: 100%;
+  }
+
+  .rle-section-2-gears h1 {
+    font-size: 40px;
+    margin-top: 60px;
+  }
+
+  .rle-section-2-gears h3 {
+    font-size: 20px;
+  }
+
+  .rle-section-1-mobile-img2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .rle-section-2-cards {
+    margin-top: 80px;
+  }
+
+  .rle-card {
+    margin-bottom: 30px;
+  }
+
+  .rle-section-3-heading {
+    font-size: 40px;
+    text-align: left;
+    margin-top: 60px;
+  }
+
+  .rle-section-3-subheading {
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    margin-top: 20px;
+    font-weight: 500;
+  }
+
+  .rle-3-card {
+    margin-bottom: 50px;
+  }
 }
