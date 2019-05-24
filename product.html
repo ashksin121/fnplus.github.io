@@ -168,89 +168,10 @@
 				</div>
 			</div>
 		</header>
-		<div id="colorlib-hero" class="js-fullheight">
-			<div class="owl-carousel">
-				<div class="item">
-					<div class="hero-flex js-fullheight">
-						<div class="col-three-forth">
-							<div class="hero-img js-fullheight" style="background-image: url(images/index/img_bg_1.jpg);">
-							</div>
-						</div>
-						<div class="col-one-forth js-fullheight">
-							<div class="display-t js-fullheight">
-								<div class="display-tc js-fullheight" style="background: #79f2c03b;">
-									<div class="text-inner">
-										<div class="desc">
-											<span class="tag">We are</span>
-											<h1>Fnplus</h1>
-											<p>A community which believes in improving & enhancing the quality of life
-												by co-creating with the help of technology. We connect tech geeks and
-												new perspectives to promote passion, diversity and innovation.
-											</p>
-											<p><a href="work" class="btn-view">What we do <i
-														class="icon-arrow-right3"></i></a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="hero-flex js-fullheight">
-						<div class="col-three-forth">
-							<div class="hero-img js-fullheight" style="background-image: url(images/index/img_bg_3.jpg);">
-							</div>
-						</div>
-						<div class="col-one-forth js-fullheight">
-							<div class="display-t js-fullheight">
-								<div class="display-tc js-fullheight" style="background: #79f2c03b;">
-									<div class="text-inner">
-										<div class="desc">
-											<span class="tag">We love</span>
-											<h1>Learning</h1>
-											<p>Geeks Garage (coming soon) is the innovation hub of our community.</p>
-											<p><a href="work" class="btn-view">What we do <i
-														class="icon-arrow-right3"></i></a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="hero-flex js-fullheight">
-						<div class="col-three-forth">
-							<div class="hero-img js-fullheight" style="background-image: url(images/index/img_bg_2.jpg);">
-							</div>
-						</div>
-						<div class="col-one-forth js-fullheight">
-							<div class="display-t js-fullheight">
-								<div class="display-tc js-fullheight" style="background: #79f2c03b;">
-									<div class="text-inner">
-										<div class="desc">
-											<span class="tag">We build with</span>
-											<h1>Community</h1>
-											<p>We connect geeks with similar
-												minded people, build strong relationships & collaboratively get stuff
-												done. Join the community for a lifetime of learning, food & friends.</p>
-											<p><a href="http://bit.ly/fnplusgeekprofile" class="btn-view">Apply Here<i class="icon-arrow-right3"></i></a></p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 
 	<!-- RLE Description -->
-
 	<div class="rle-main-container">
-
 		<!-- Section 1 -->
 		<div class="rle-section-1">
 			<div class="container">
@@ -426,116 +347,6 @@
 			</div>
 	</footer>
 
-	<!-- ADD CONFIG	-->
-	<script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
-	<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyBL6LDmX6fuIy5d35iq15jz9fW-AnwtwDI",
-			authDomain: "community-updates.firebaseapp.com",
-			databaseURL: "https://community-updates.firebaseio.com",
-			projectId: "community-updates",
-			storageBucket: "community-updates.appspot.com",
-			messagingSenderId: "38226611639"
-		};
-		firebase.initializeApp(config);
-	</script>
-
-	<script>
-		const messaging = firebase.messaging();
-		messaging.usePublicVapidKey('BMXXuXuiGgtBPLsOlj9O8Xeg-D53bZ4xc38saTUWGCQfFnBxhEyhwU3SWxAYxp9KB_Ck8MHMeBPvb5HE9fVfuqg');
-
-		// [START refresh_token]
-		// Callback fired if Instance ID token is updated.
-		messaging.onTokenRefresh(function () {
-			messaging.getToken().then(function (refreshedToken) {
-				console.log('Token refreshed.');
-				// Indicate that the new Instance ID token has not yet been sent to the
-				// app server.
-				setTokenSentToServer(false);
-				// Send Instance ID token to app server.
-				console.log('Token', refreshedToken);
-
-			}).catch(function (err) {
-				console.log('Unable to retrieve refreshed token ', err);
-				showToken('Unable to retrieve refreshed token ', err);
-			});
-		});
-		// [END refresh_token]
-
-		requestPermission();
-
-		// [START get_token]
-		// Get Instance ID token. Initially this makes a network call, once retrieved
-		// subsequent calls to getToken will return from cache.
-		messaging.getToken().then(function (currentToken) {
-			if (currentToken) {
-				console.log(currentToken);
-			} else {
-				// Show permission request.
-				console.log('No Instance ID token available. Request permission to generate one.');
-				// Show permission UI.
-				setTokenSentToServer(false);
-			}
-		}).catch(function (err) {
-			console.log('An error occurred while retrieving token. ', err);
-			setTokenSentToServer(false);
-		});
-		// [END get_token]
-
-		// [START receive_message]
-		// Handle incoming messages. Called when:
-		// - a message is received while the app has focus
-		// - the user clicks on an app notification created by a service worker
-		//   `messaging.setBackgroundMessageHandler` handler.
-		messaging.onMessage(function (payload) {
-			console.log('Message received. ', payload);
-
-		});
-		// [END receive_message]
-
-		function isTokenSentToServer() {
-			return window.localStorage.getItem('sentToServer') === '1';
-		}
-
-		function setTokenSentToServer(sent) {
-			window.localStorage.setItem('sentToServer', sent ? '1' : '0');
-		}
-
-		function requestPermission() {
-			console.log('Requesting permission...');
-			// [START request_permission]
-			messaging.requestPermission().then(function () {
-				console.log('Notification permission granted.');
-				// TODO: Retrieve an Instance ID token for use with FCM. Check token from here.
-				// console.log('Token :', messaging.getToken());
-
-			}).catch(function (err) {
-				console.log('Unable to get permission to notify.', err);
-			});
-			// [END request_permission]
-		}
-
-		function deleteToken() {
-			// Delete Instance ID token.
-			// [START delete_token]
-			messaging.getToken().then(function (currentToken) {
-				messaging.deleteToken(currentToken).then(function () {
-					console.log('Token deleted.');
-					setTokenSentToServer(false);
-					// Something
-				}).catch(function (err) {
-					console.log('Unable to delete token. ', err);
-				});
-				// [END delete_token]
-			}).catch(function (err) {
-				console.log('Error retrieving Instance ID token. ', err);
-				showToken('Error retrieving Instance ID token. ', err);
-			});
-
-		}
-
-	</script>
 	<!--mailchimp subscriber pop-up -->
 	<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"699626334d1f5e2970a64e0f9","lid":"f38d0264ba","uniqueMethods":true}) })</script>-->
 
@@ -549,6 +360,9 @@
 	<script src="js/jquery.waypoints.min.js"></script>
 	<!-- Owl Carousel -->
 	<script src="js/owl.carousel.min.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
 </body>

@@ -213,6 +213,19 @@
               <p>
                 <a href="" class="btn-view">Connect With Us</a>
               </p>
+              <div id="myModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <i class="modal-header close-modal icon-cross"></i>
+                    <div class="modal-body">
+                        <iframe class="airtable-embed"
+                            src="https://airtable.com/embed/shr2k7NgGph8MFOkU?backgroundColor=red"
+                            frameborder="0" onmousewheel="" width="100%" height="533"
+                            style="background: transparent; border: 1px solid #ccc;">
+                        </iframe>
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -235,7 +248,7 @@
             <div class="col-sm-12 col-md-8">
               <h3>Hire Individuals</h3>
               <p>
-                Bridge a skill gap within your team, add a particular area of
+                Bridge skill gap within your team, add a particular area of
                 expertise, or extend the bandwidth of your team.
               </p>
             </div>
@@ -274,7 +287,7 @@
       <div class="hire-section-2-mobile">
         <div class="container">
           <h1>Hire Geeks from all Fields</h1>
-          <img src="/images/hire/hire5.png" alt="Hire5" />
+          <img src="/images/hire/hire5.png" alt="Hiring Domains" />
 
           <p class="hire-section-2-subheading">
             Our geeks have a wide variety of in-demand skills and have been
@@ -283,16 +296,28 @@
           </p>
           <div class="hire-section-2-list">
             <ul>
+                <li>
+                  <h5>Web Full-Stack</h5>
+                  <p>
+                    JavaScript, HTML, CSS, React, Node, Python, Django, SQL, Testing
+                  </p>
+                </li>
               <li>
                 <h5>Mobile Development</h5>
                 <p>
-                  Android(Kotlin, Java), IOS, Flutter, React Native, UI
+                  Android(Kotlin, Java), iOS, Flutter, React Native
                 </p>
               </li>
               <li>
-                <h5>Web Full-Stack</h5>
+                <h5>DevOps</h5>
                 <p>
-                  JavaScript, HTML, CSS, ReactJS, Node, Python, SQL, Testing
+                  Gradle, Git, Jenkins, Docker, Kubernetes, Vagrant
+                </p>
+              </li>
+              <li>
+                <h5>UX</h5>
+                <p>
+                  User Research, Ideation, Usability, Visual Hierarchy and Wireframes, High Fidelity Design, HTML, CSS, Javascript, React
                 </p>
               </li>
               <li>
@@ -302,13 +327,19 @@
                   Visualization, Big Data, Databases
                 </p>
               </li>
+              <li>
+                <h5>Cyber Security</h5>
+                <p>
+                  CEH, CISSP, CISM, CISA, SANS GIAC, Ethical Hackers, Network Security, Application Security, Systems Security
+                </p>
+              </li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="hire-section-2">
-        <img class="hire-section-2-img" src="/images/hire/hire5.png" alt="" />
+        <img class="hire-section-2-img" src="/images/hire/hire5.png" alt="Hiring Domains" />
         <div class="container">
           <div class="row text-container">
             <div class="col-md-6">
@@ -321,16 +352,27 @@
               <div class="hire-section-2-list">
                 <ul>
                   <li>
+                      <h5>Web Full-Stack</h5>
+                      <p>
+                        JavaScript, HTML, CSS, React, Node, Python, Django, SQL, Testing
+                      </p>
+                    </li>
+                  <li>
                     <h5>Mobile Development</h5>
                     <p>
-                      Android(Kotlin, Java), IOS, Flutter, React Native, UI
+                      Android(Kotlin, Java), iOS, Flutter, React Native
                     </p>
                   </li>
                   <li>
-                    <h5>Web Full-Stack</h5>
+                    <h5>DevOps</h5>
                     <p>
-                      JavaScript, HTML, CSS, ReactJS, Node, Python, SQL,
-                      Testing
+                      Gradle, Git, Jenkins, Docker, Kubernetes, Vagrant
+                    </p>
+                  </li>
+                  <li>
+                    <h5>UX</h5>
+                    <p>
+                      User Research, Ideation, Usability, Visual Hierarchy and Wireframes, High Fidelity Design, HTML, CSS, Javascript, React
                     </p>
                   </li>
                   <li>
@@ -338,6 +380,12 @@
                     <p>
                       Python, Statistical Modeling, Linear Algebra, Model
                       Visualization, Big Data, Databases
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Cyber Security</h5>
+                    <p>
+                      CEH, CISSP, CISM, CISA, SANS GIAC, Ethical Hackers, Network Security, Application Security, Systems Security
                     </p>
                   </li>
                 </ul>
@@ -409,6 +457,33 @@
     </footer>
   </div>
 
+  <!-- modal -->
+  <script>
+      var modal = document.getElementById('myModal');
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var close = document.getElementsByClassName("close-modal")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+          modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      close.onclick = function () {
+          modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+          if (event.target == modal || event.target == modal2) {
+              modal.style.display = "none";
+          }
+      }
+  </script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <!-- jQuery Easing -->
@@ -419,10 +494,6 @@
   <script src="js/jquery.waypoints.min.js"></script>
   <!-- Owl Carousel -->
   <script src="js/owl.carousel.min.js"></script>
-  <!-- Magnific Popup -->
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/magnific-popup-options.js"></script>
-
   <!-- Main JS (Do not remove) -->
   <script src="js/main.js"></script>
 </body>
