@@ -1645,6 +1645,93 @@ canvas {
   padding-left: 20px !important;
 }
 
+/* Social Share bar */
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+
+  z-index: 1000;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #fff;
+}
+
+.facebook {
+  background: #3b5998;
+}
+
+.instagram {
+  background: #c1558b;
+}
+
+.twitter {
+  background: #55acee;
+}
+
+.github {
+  background: #000;
+}
+
+.medium {
+  background: #029843;
+}
+
+.linkedin {
+  background: #007bb5;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+
+.instagram:hover {
+  color: #c1558b;
+}
+
+.twitter:hover {
+  color: #55acee;
+}
+
+.github:hover {
+  color: #000;
+}
+
+.medium:hover {
+  color: #029843;
+}
+
+.linkedin:hover {
+  color: #007bb5;
+}
+
+@media screen and (max-width: 768px) {
+  .icon-bar {
+    right: 50%;
+    top: 0;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+  }
+}
+
 /* Loading icon for iframe */
 
 iframe {
