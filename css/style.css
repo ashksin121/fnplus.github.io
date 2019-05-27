@@ -2211,38 +2211,96 @@ iframe {
 
 .hire-section-2 {
   height: 100vh;
-  background: url(/images/hire/hire-background2.png) no-repeat;
-  background-size: cover;
-  background-position: right top;
-  margin-top: 30px;
-}
-
-.hire-section-2 h1 {
-  font-size: 45px;
-  font-weight: 700;
-}
-
-.hire-section-2-img {
-  height: 100%;
-  float: right;
-}
-
-.hire-section-2 .text-container {
   margin-top: 50px;
 }
 
-.hire-section-2-list h5 {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 0px !important;
-}
-
-.hire-section-2-list p {
-  font-size: 15px;
+.hire-section-2 h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 0 0 0 30px;
 }
 
 .hire-section-2-subheading {
+  padding: 10px 30px;
+}
+
+.hire-section-2-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 53%;
+}
+
+.hire-section-2-heading-container {
+  position: relative;
+  width: 100%;
+  min-width: 600px;
+  max-width: 600px;
+  flex: 1 0 0%;
+  margin-top: 30px;
+}
+
+.hire-section-2 .text-container {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.hire-section-2-list h5 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0px !important;
+  transform: skewX(25deg);
+  text-align: right;
+}
+
+.hire-section-2-list p {
   font-size: 18px;
+  margin-bottom: 15px;
+  margin-left: 20px;
+  transform: skewX(25deg);
+  color: white;
+}
+
+.hire-section-2-list li {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.hire-section-2-list {
+  width: calc(35% + 235px);
+  transform: skewX(-25deg);
+  transform-origin: 0px 0px;
+  z-index: 3;
+  margin-top: 60px;
+}
+
+.hire-section-2-background-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hire-section-2-background {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  width: 100%;
+  left: 65%;
+  transform: skewX(-25deg);
+  transform-origin: 0px 0px;
+  background: #029843;
+}
+
+.hire-section-2-subheading {
+  font-size: 16px;
 }
 
 .hire-jumbotron-mobile {
