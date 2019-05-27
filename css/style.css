@@ -2338,6 +2338,7 @@ iframe {
 
   .hire-section-1 h1 {
     font-size: 35px;
+    text-align: left;
   }
 
   .hire-section-1 .section-card img {
@@ -2359,17 +2360,42 @@ iframe {
   }
 
   .hire-section-2-mobile img {
-    width: 100%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
   }
 
   .hire-section-2-mobile h1 {
     font-size: 35px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
   }
 
   .hire-section-2-subheading {
     margin-top: 30px;
+  }
+
+  .hire-section-2-mobile .hire-section-2-subheading {
+    padding: 0px;
+    text-align: justify;
+  }
+
+  .hire-section-2-list-mobile {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 40px;
+  }
+
+  .hire-section-2-list-mobile h5 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .hire-section-2-list-mobile p {
+    font-size: 16px;
   }
 }
 
