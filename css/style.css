@@ -2243,11 +2243,12 @@ iframe {
 
 .hire-section-2-heading-container {
   position: relative;
-  width: 100%;
-  min-width: 600px;
-  max-width: 600px;
+  min-width: 550px;
+  max-width: 550px;
   flex: 1 0 0%;
   margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 0;
 }
 
 .hire-section-2 .text-container {
@@ -2308,6 +2309,20 @@ iframe {
 
 .hire-section-2-subheading {
   font-size: 16px;
+}
+
+.hire-section-3 {
+  text-align: center;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.hire-section-3 h1 {
+  margin-bottom: 10px;
+}
+
+.hire-section-3 h3 {
+  margin-bottom: 60px;
 }
 
 .hire-jumbotron-mobile {
