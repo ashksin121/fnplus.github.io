@@ -2123,6 +2123,13 @@ iframe {
   color: #333333;
 }
 
+@media only screen and (min-width: 768px) {
+  .our-team {
+    height: 400px;
+    margin-bottom: 50px;
+  }
+}
+
 @media only screen and (max-width: 990px) {
   .our-team {
     margin-bottom: 30px;
