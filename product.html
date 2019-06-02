@@ -27,7 +27,9 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png">
 	<link rel="manifest" href="/icons/site.webmanifest">
 	<link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="/icons/favicon.ico">
+	<link rel="shortcut icon" href="/icons/favicon.ico" id="normal-scheme-icon">
+	<link rel="shortcut icon" href="/icons/faviconDark.ico" id="dark-scheme-icon">
+	<link rel="shortcut icon" href="/icons/faviconLight.ico" id="light-scheme-icon">
 	<meta name="msapplication-TileColor" content="#da532c">
 	<meta name="msapplication-config" content="/icons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
@@ -365,6 +367,63 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+
+	<style>
+		html {
+				content: "";
+		}
+
+		/* Light mode */
+		@media (prefers-color-scheme: light) {
+				html {
+						content: "light";
+				}
+		}
+
+		/* Dark mode */
+		@media (prefers-color-scheme: dark) {
+				html {
+						content: "dark";
+				}
+		}
+	</style>
+
+	<script>
+		window.addEventListener('DOMContentLoaded', () => {
+			const mode = getComputedStyle(document.documentElement).getPropertyValue('content');
+
+			const lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+			const darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+			const normalSchemeIcon = document.querySelector('link#normal-scheme-icon');
+
+			function setLight() {
+				document.head.append(lightSchemeIcon);
+				darkSchemeIcon.remove();
+				normalSchemeIcon.remove();
+			}
+
+			function setDark() {
+				lightSchemeIcon.remove();
+				normalSchemeIcon.remove();
+				document.head.append(darkSchemeIcon);
+			}
+
+			function setNormal() {
+				lightSchemeIcon.remove();
+				darkSchemeIcon.remove();
+				document.head.append(normalSchemeIcon);
+			}
+
+			if(mode == "\"light\""){
+				setLight();
+			} else if(mode == "\"dark\""){
+				setDark();
+			} else {
+				setNormal();
+			}
+		});
+	</script>
 </body>
 
 </html>
