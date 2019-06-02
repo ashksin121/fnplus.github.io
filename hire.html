@@ -307,12 +307,12 @@
                 part-time we got you covered.
               </p>
               <p>
-                <a href="" class="btn-view">Connect With Us</a>
+                <a id="myBtn-mobile" class="btn-view">Connect With Us</a>
               </p>
-              <div id="myModal" class="modal">
+              <div id="myModal-mobile" class="modal">
                 <!-- Modal content -->
                 <div class="modal-content">
-                  <i class="modal-header close-modal icon-cross"></i>
+                  <i class="modal-header close-modal-mobile icon-cross"></i>
                   <div class="modal-body">
                     <iframe class="airtable-embed"
                       src="https://airtable.com/embed/shr2k7NgGph8MFOkU?backgroundColor=red" frameborder="0"
@@ -630,10 +630,40 @@
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
-      if (event.target == modal || event.target == modal2) {
+      if (event.target == modal) {
         modal.style.display = "none";
       }
     }
+
+    // For Mobile
+
+    var modalMobile = document.getElementById('myModal-mobile');
+
+    // Get the button that opens the modal
+    var btnMobile = document.getElementById("myBtn-mobile");
+
+    // Get the <span> element that closes the modal
+    var closeMobile = document.getElementsByClassName("close-modal-mobile")[0];
+
+    // When the user clicks the button, open the modal
+    btnMobile.onclick = function () {
+      modalMobile.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    closeMobile.onclick = function () {
+      modalMobile.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modalMobile) {
+        modalMobile.style.display = "none";
+      }
+    }
+
+
+
   </script>
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -647,6 +677,22 @@
   <script src="js/owl.carousel.min.js"></script>
   <!-- Main JS (Do not remove) -->
   <script src="js/main.js"></script>
+
+
+  <script>
+    $("#myBtn-bottom").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+
+        if($(".hire-jumbotron-mobile").css("display") === "none"){
+          var modal = document.getElementById('myModal');
+          modal.style.display = "block";
+        } else {
+          var modalMobile = document.getElementById('myModal-mobile');
+          modalMobile.style.display = "block";
+        }
+        return false;
+      });
+  </script>
 </body>
 
 </html>
