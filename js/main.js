@@ -150,6 +150,44 @@
     );
   }
 
+  // Light Mode Dark Mode Detection
+
+  var iconMode = function() {
+    const mode = getComputedStyle(document.documentElement).getPropertyValue(
+      "content"
+    );
+
+    const lightSchemeIcon = document.querySelector("link#light-scheme-icon");
+    const darkSchemeIcon = document.querySelector("link#dark-scheme-icon");
+    const normalSchemeIcon = document.querySelector("link#normal-scheme-icon");
+
+    function setLight() {
+      darkSchemeIcon.remove();
+      normalSchemeIcon.remove();
+      document.head.append(lightSchemeIcon);
+    }
+
+    function setDark() {
+      normalSchemeIcon.remove();
+      lightSchemeIcon.remove();
+      document.head.append(darkSchemeIcon);
+    }
+
+    function setNormal() {
+      lightSchemeIcon.remove();
+      darkSchemeIcon.remove();
+      document.head.append(normalSchemeIcon);
+    }
+
+    if (mode == '"light"') {
+      setLight();
+    } else if (mode == '"dark"') {
+      setDark();
+    } else {
+      setNormal();
+    }
+  };
+
   // Document on load.
   $(function() {
     fullHeight();
@@ -158,6 +196,7 @@
     contentWayPoint();
     owlCarouselFeatureSlide();
     navHover();
+    iconMode();
   });
 })();
 

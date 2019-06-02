@@ -2672,3 +2672,23 @@ iframe {
     margin-bottom: 50px;
   }
 }
+
+/* Light Mode Dark Mode Detection */
+
+html {
+  content: "";
+}
+
+/* Light mode */
+@media (prefers-color-scheme: light) {
+  html {
+    content: "light";
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  html {
+    content: "dark";
+  }
+}
