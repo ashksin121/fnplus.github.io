@@ -2692,3 +2692,57 @@ html {
     content: "dark";
   }
 }
+
+/* RLE section 4 Review Card */
+
+.rle-section-4-heading {
+  text-align: center;
+  margin: 60px 20px 0 20px !important;
+}
+
+.rle-section-4-heading h1 {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.owl-carousel-reviews {
+  padding: 30px;
+}
+
+.rle-review-card {
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
+  box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  background-color: #f5f5f5;
+}
+
+.rle-review-heading {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  margin: 20px !important;
+  padding-top: 20px;
+}
+
+.rle-review-heading img {
+  vertical-align: middle;
+  width: 100px !important;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.rle-review-heading h3 {
+  line-height: 100px;
+  padding-left: 20px;
+}
+
+.rle-review-quote {
+  margin: 50px 30px;
+  text-align: justify;
+}
