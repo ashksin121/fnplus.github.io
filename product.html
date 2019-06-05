@@ -448,8 +448,16 @@
 					autoplay: true,
 					autoplayTimeout: 2000,
 					// autoplayHoverPause: true,
-					loop: true
-				});
+					loop: true,
+					responsive: {
+						0: {
+							items: 1
+						},
+						600: {
+							items: 3
+						}
+					}
+				})
 			})
 	</script>
 </body>

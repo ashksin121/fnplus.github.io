@@ -2719,7 +2719,7 @@ html {
   -webkit-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
   -moz-box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
   box-shadow: 10px 10px 10px -3px rgba(0, 0, 0, 0.38);
-  border-radius: 50px;
+  border-radius: 30px;
   margin-top: 10px;
   margin-bottom: 50px;
   background-color: #f5f5f5;
@@ -2749,4 +2749,22 @@ html {
   margin: 40px 30px;
   text-align: justify;
   color: #000 !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .rle-section-4 {
+    height: auto;
+    background: none;
+  }
+
+  .rle-section-4-heading {
+    font-size: 40px;
+  }
+
+  .rle-review-card {
+    width: 280px;
+    -webkit-box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.38);
+    box-shadow: 4px 4px 4px -3px rgba(0, 0, 0, 0.38);
+  }
 }
