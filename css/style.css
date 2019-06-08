@@ -511,6 +511,14 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   padding-right: 3em;
   position: relative;
 }
+
+#colorlib-hero .hero-flex .text-inner .desc p {
+  color: #3f3f3f;
+}
+
+#colorlib-hero .hero-flex .text-inner .desc span {
+  color: #3f3f3f;
+}
 @media screen and (max-width: 768px) {
   #colorlib-hero .hero-flex .text-inner .desc {
     padding: 1em;
