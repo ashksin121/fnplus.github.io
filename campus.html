@@ -68,6 +68,100 @@
   <!--[if lt IE 9]>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
+    <!-- Modal Styles -->
+
+    <style>
+      p,
+      span {
+        color: #000;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .modal-header {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: #000 !important;
+        z-index: 100;
+        font-size: 12px;
+        border: none;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 80px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 1px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+
+      /* Add Animation */
+      @-webkit-keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0
+        }
+
+        to {
+          top: 0;
+          opacity: 1
+        }
+      }
+
+      @keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0
+        }
+
+        to {
+          top: 0;
+          opacity: 1
+        }
+      }
+
+      .close-modal:hover,
+      .close-modal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+      }
+
+      p,
+      span {
+        color: #000;
+      }
+    </style>
 </head>
 
 <body>
@@ -179,7 +273,19 @@
               brilliant, like minded
               College Superheroes who have the zeal to take initiative and build an engaging community.
             </p>
-            <p><a href="https://airtable.com/shrrtYcDcovPzj8Ke" class="btn-view">Apply Now</a></p>
+            <p><a id="myBtn" class="btn-view">Apply Now</a></p>
+          </div>
+        </div>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <i class="modal-header close-modal icon-cross"></i>
+            <div class="modal-body">
+              <iframe class="airtable-embed" src="https://airtable.com/embed/shrrtYcDcovPzj8Ke"
+                frameborder="0" onmousewheel="" width="100%" height="533"
+                style="background: transparent; border: 1px solid #ccc;">
+              </iframe>
+            </div>
           </div>
         </div>
 
@@ -278,7 +384,7 @@
           <h1 class="campus-apply-now-heading">
             Think You Are Ready For This?
           </h1>
-          <p><a href="https://airtable.com/shrrtYcDcovPzj8Ke" class="btn-view">Apply Now</a></p>
+          <p><a id="myBtn-bottom" class="btn-view">Apply Now</a></p>
         </div>
 
       </div>
@@ -338,6 +444,26 @@
       </div>
     </div>
 
+    <!-- modal -->
+    <script>
+      var modal = document.getElementById('myModal');
+      var btn = document.getElementById("myBtn");
+      var close = document.getElementsByClassName("close-modal")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+
+      close.onclick = function () {
+        modal.style.display = "none";
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -350,6 +476,16 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Main JS (Do not remove) -->
     <script src="js/main.js"></script>
+
+    <!-- Scroll to top for bottom button -->
+    <script>
+      $("#myBtn-bottom").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        var modal = document.getElementById('myModal');
+        modal.style.display = "block";
+        return false;
+      });
+    </script>
 </body>
 
 </html>
