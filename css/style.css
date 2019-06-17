@@ -2503,7 +2503,6 @@ iframe {
   background-size: 100% 100%;
   background-position: center center;
   padding-top: 30px;
-  margin-top: 50px;
 }
 
 .rle-3-card {
@@ -2859,4 +2858,42 @@ html {
 .rle-desc-1-text ul {
   color: black;
   font-size: 17px;
+}
+
+.rle-desc-section-2 {
+  height: 100vh;
+}
+
+.rle-desc-section-2 h1 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 70px;
+}
+
+.rle-tools-card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.2s;
+  width: 80px;
+}
+
+.rle-tools-card img:hover {
+  transform: scale(1.2);
+}
+
+.rle-tools-card {
+  text-align: center;
+  padding: 0 50px !important;
+}
+
+.rle-tools-card h3 {
+  margin-top: 10px;
+  margin-bottom: 10px !important;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.rle-3-card p {
+  font-size: 10px;
 }
