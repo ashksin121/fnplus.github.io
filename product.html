@@ -190,7 +190,19 @@
 						"Learner Resume" which stays with you throughout your life.
 					</h4>
 					<br/>
-					<a href="https://airtable.com/shrllJsFRn4dtm15p" class="btn-view">Request a Demo</a>
+					<a id="myBtn" class="btn-view">Request a Demo</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<i class="modal-header close-modal icon-cross"></i>
+				<div class="modal-body">
+					<iframe class="airtable-embed" src="https://airtable.com/embed/shrllJsFRn4dtm15p" frameborder="0" onmousewheel=""
+						width="100%" height="533" style="background: transparent; border: 1px solid #ccc;">
+					</iframe>
 				</div>
 			</div>
 		</div>
@@ -276,9 +288,9 @@
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row" style="margin-top: 30px">
 					<div class="col-md-2"></div>
-					<div class="`col-md-4 rle-tools-card">
+					<div class="col-md-4 rle-tools-card">
 						<a href="#">
 							<img src="images/product/rle-img-profile.png" alt="">
 						</a>
@@ -501,6 +513,24 @@
 	<script src="js/main.js"></script>
 
 	<script>
+      var modal = document.getElementById('myModal');
+      var btn = document.getElementById("myBtn");
+      var close = document.getElementsByClassName("close-modal")[0];
+
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+
+      close.onclick = function () {
+        modal.style.display = "none";
+      }
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+			}
+
+
 		$(document).ready(function () {
 			$(".owl-carousel-reviews").owlCarousel({
 				autoplay: true,
