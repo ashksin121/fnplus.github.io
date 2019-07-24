@@ -2446,7 +2446,7 @@ iframe {
 }
 
 .rle-section-1-subheading {
-  font-size: 25px;
+  font-size: 23px;
   font-weight: 500;
 }
 
@@ -2482,8 +2482,8 @@ iframe {
 }
 
 .rle-card {
-  background: #8effb4;
-  height: 200px;
+  background: #029843;
+  height: 240px;
   padding: 20px 30px;
   border-radius: 20px;
   transition: transform 0.3s;
@@ -2497,11 +2497,13 @@ iframe {
 .rle-card .card-title {
   text-align: center;
   font-weight: 500;
+  color: white;
 }
 
 .rle-card .card-text {
   text-align: justify;
   color: #333333;
+  color: white;
 }
 
 .rle-section-3 {
@@ -2869,7 +2871,7 @@ html {
 }
 
 .rle-desc-section-2 {
-  margin-top: 40px;
+  margin-top: 100px;
   height: 100vh;
 }
 
