@@ -1,4 +1,3 @@
-<script>
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBL6LDmX6fuIy5d35iq15jz9fW-AnwtwDI",
@@ -10,4 +9,3 @@ var config = {
     appId: "1:38226611639:web:f4eb0e1549522cc9"
 };
 firebase.initializeApp(config);
-</script>
