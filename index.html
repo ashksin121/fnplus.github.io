@@ -5,18 +5,18 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="alternate" href="https://fnplus.tech" hreflang="en-us" />
-	<title>Fnplus Tech | Exploring the power of Communities</title>
+	<title>FnPlus Tech | Your Personal Growth Story Starts Here</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description"
-		content="We connect geeks and new perspectives to promote diversity, innovation & passion." />
+		content="We are creating a future resume that proves learners knowledge outside of their formal education." />
 	<meta name="keywords"
-		content="fn+, fnplus, fnplus tech, tech community, community, training, machine learning training, research, hiring talent, talent, artificial intelligence training, flutter training, cloud training, data science training, technology, geeks, geeksgarage, college students, professionals, developers, empathy, startup" />
-	<meta name="author" content="Fnplus Tech Community" />
+		content="fnplus, fnplus community, fnplus tech community, best training institute, training, machine learning training, ai training, flutter training, cloud training, data science training, hiring talent, software developer, training and development, online training, geeks, geeksgarage, learn skills, jobs, high paying jobs, hiring, lifelong learners, reskilling, informal learning, project-based learning, creativity, 21st century skills, collaboration, developers, empathy, startup" />
+	<meta name="author" content="FnPlus Community" />
 
 	<!-- Tags for rich preview -->
-	<meta property="og:title" content="Fnplus Tech | Exploring the power of Communities" />
+	<meta property="og:title" content="FnPlus Tech | Your Personal Growth Story Starts Here" />
 	<meta property="og:description"
-		content="We connect geeks and new perspectives to promote diversity, innovation & passion." />
+		content="We are creating a future resume that proves learners knowledge outside of their formal education." />
 	<meta property="og:url" content="https://fnplus.tech" />
 	<meta property="og:image" content="/icons/android-chrome-384x384.png" />
 	<link rel="shortcut icon" href="/icons/favicon.ico" type="image/x-icon" />
@@ -46,7 +46,6 @@
 	<!-- End Google Tag Manager -->
 
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -58,7 +57,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Magnific Popup -->
 	<link rel="stylesheet" href="css/magnific-popup.css">
-
+	<!-- Styles -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -241,32 +240,21 @@
 	</div>
 
 	<!-- ADD CONFIG	-->
-	<script defer src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
-	<script defer src="https://www.gstatic.com/firebasejs/6.3.1/firebase-firestore.js"></script>
-	
+	<script defer src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+	<script defer src="https://www.gstatic.com/firebasejs/6.3.3/firebase-messaging.js"></script>
+	<!-- Load Firebase after the page has been loaded (https://firebase.google.com/docs/web/setup?authuser=0#additional_setup_options)-->
 	<script defer src="./init-firebase.js"></script>
-	<script>
-		// Initialize Firebase
-		var config = {
-			apiKey: "AIzaSyBL6LDmX6fuIy5d35iq15jz9fW-AnwtwDI",
-			authDomain: "community-updates.firebaseapp.com",
-			databaseURL: "https://community-updates.firebaseio.com",
-			projectId: "community-updates",
-			storageBucket: "community-updates.appspot.com",
-			messagingSenderId: "38226611639"
-		};
-		firebase.initializeApp(config);
-	</script>
 
 	<script>
 		const messaging = firebase.messaging();
 		messaging.usePublicVapidKey('BMXXuXuiGgtBPLsOlj9O8Xeg-D53bZ4xc38saTUWGCQfFnBxhEyhwU3SWxAYxp9KB_Ck8MHMeBPvb5HE9fVfuqg');
 
+		requestPermission();
+
 		// [START refresh_token]
 		// Callback fired if Instance ID token is updated.
-		messaging.onTokenRefresh(function () {
-			messaging.getToken().then(function (refreshedToken) {
+		messaging.onTokenRefresh(() => {
+			messaging.getToken().then((refreshedToken) => {
 				console.log('Token refreshed.');
 				// Indicate that the new Instance ID token has not yet been sent to the
 				// app server.
@@ -274,19 +262,18 @@
 				// Send Instance ID token to app server.
 				console.log('Token', refreshedToken);
 
-			}).catch(function (err) {
+			}).catch((err) => {
 				console.log('Unable to retrieve refreshed token ', err);
 				showToken('Unable to retrieve refreshed token ', err);
 			});
 		});
 		// [END refresh_token]
-
-		requestPermission();
+		
 
 		// [START get_token]
 		// Get Instance ID token. Initially this makes a network call, once retrieved
 		// subsequent calls to getToken will return from cache.
-		messaging.getToken().then(function (currentToken) {
+		messaging.getToken().then((currentToken) => {
 			if (currentToken) {
 				console.log(currentToken);
 			} else {
@@ -295,7 +282,7 @@
 				// Show permission UI.
 				setTokenSentToServer(false);
 			}
-		}).catch(function (err) {
+		}).catch((err) => {
 			console.log('An error occurred while retrieving token. ', err);
 			setTokenSentToServer(false);
 		});
@@ -323,36 +310,32 @@
 		function requestPermission() {
 			console.log('Requesting permission...');
 			// [START request_permission]
-			messaging.requestPermission().then(function () {
-				console.log('Notification permission granted.');
-				// TODO: Retrieve an Instance ID token for use with FCM. Check token from here.
-				// console.log('Token :', messaging.getToken());
-
-			}).catch(function (err) {
-				console.log('Unable to get permission to notify.', err);
+			Notification.requestPermission().then((permission) => {
+				if (permission === 'granted') {
+					console.log('Notification permission granted.');
+					// TODO(developer): Retrieve an Instance ID token for use with FCM.
+					console.log('Token :', messaging.getToken());
+				} else {
+					console.log('Unable to get permission to notify.');
+				}
 			});
-			// [END request_permission]
 		}
 
 		function deleteToken() {
 			// Delete Instance ID token.
-			// [START delete_token]
-			messaging.getToken().then(function (currentToken) {
-				messaging.deleteToken(currentToken).then(function () {
-					console.log('Token deleted.');
-					setTokenSentToServer(false);
-					// Something
-				}).catch(function (err) {
-					console.log('Unable to delete token. ', err);
-				});
-				// [END delete_token]
-			}).catch(function (err) {
-				console.log('Error retrieving Instance ID token. ', err);
-				showToken('Error retrieving Instance ID token. ', err);
+			messaging.getToken().then((currentToken) => {
+			messaging.deleteToken(currentToken).then(() => {
+				console.log('Token deleted.');
+				setTokenSentToServer(false);
+			}).catch((err) => {
+				console.log('Unable to delete token. ', err);
 			});
-
+			// [END delete_token]
+			}).catch((err) => {
+			console.log('Error retrieving Instance ID token. ', err);
+			showToken('Error retrieving Instance ID token. ', err);
+			});
 		}
-
 	</script>
 	<!--mailchimp subscriber pop-up -->
 	<!--<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us17.list-manage.com","uuid":"699626334d1f5e2970a64e0f9","lid":"f38d0264ba","uniqueMethods":true}) })</script>-->
