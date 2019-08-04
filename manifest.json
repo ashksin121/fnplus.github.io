@@ -1,23 +1,22 @@
 {
- "name": "Fnplus | Geek's Community",
- "short_name" : "fn+ community",
- "icons": [
+    "name": "Cult of Fn+Geeks",
+    "short_name": "FnPlus",
+    "icons": [
         {
-            "src": "/favicons/android-chrome-192x192.png",
+            "src": "/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/favicons/android-chrome-512x512.png",
+            "src": "/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
- "start_url": "/index.html",
- "scope": "/?utm_source=a2hs",
- "display": "standalone",
- "orientation": "portrait",
- "theme_color": "#ffffff",
- "background_color": "#000000",
- "gcm_sender_id": "38226611639"
+    "theme_color": "#029843",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/?utm_source=a2hs"
 }
