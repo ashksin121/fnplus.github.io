@@ -1849,18 +1849,19 @@ canvas {
   color: #007bb5;
 }
 
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .icon-bar {
     right: 50%;
     top: 0;
     display: flex;
+    visibility: hidden;
     margin: 0;
     padding: 0;
     -webkit-transform: translateX(50%);
     -ms-transform: translateX(50%);
     transform: translateX(50%);
   }
-} */
+}
 
 /* Loading icon for iframe */
 
