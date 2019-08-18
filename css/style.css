@@ -3126,27 +3126,18 @@ clearfix, .m-timeline li {
 }
 
 .m-timeline .text-canvas {
-  background: linear-gradient(to bottom right, #029843, #e0fcf0);
+  background: #029843;
   position: relative;
   color: #fff;
   padding: 1em;
 }
 
 .m-timeline .text-canvas:before {
-  background: linear-gradient(to bottom right, #029843, #e0fcf0);
-  display: none;
-  content: " ";
-  position: absolute;
-  z-index: 1;
-  right: -34.5px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 7px;
-  height: 7px;
+  
 }
 
 .m-timeline .text-canvas:after {
-  background: linear-gradient(to bottom right, #029843, #e0fcf0);
+  background: #029843;
   display: block;
   content: " ";
   position: absolute;
